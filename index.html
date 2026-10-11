@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuestro Grupo // Atardecer Estrellado</title>
+    <title>Nuestro Grupo // Modern Mesh</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Cinzel, Inter, Pinyon Script, VT323 (for VHS HUD) -->
+    <!-- Google Fonts: Plus Jakarta Sans, Outfit, Playfair Display -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -20,10 +20,9 @@
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Cinzel', 'serif'],
-                        cursive: ['Pinyon Script', 'cursive'],
-                        vhs: ['VT323', 'monospace'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
                     }
                 }
             }
@@ -32,133 +31,133 @@
 
     <style>
         body {
-            background-color: #0b0314;
-            color: #f3f4f6;
-            font-family: 'Inter', sans-serif;
+            background-color: #030712;
+            color: #f9fafb;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             overflow-x: hidden;
             user-select: none;
         }
 
-        /* Glassmorphism Cards */
-        .glass-card {
-            background: rgba(35, 12, 55, 0.45);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-            transition: all 0.35s ease;
+        /* Animated Mesh Background Glows */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.45;
+            pointer-events: none;
+            animation: pulseGlow 10s infinite alternate ease-in-out;
         }
 
-        .glass-card:hover {
-            background: rgba(55, 18, 85, 0.6);
-            border-color: rgba(244, 114, 182, 0.35);
-            box-shadow: 0 12px 35px rgba(244, 114, 182, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.25);
+        .orb-1 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #8b5cf6 0%, rgba(139, 92, 246, 0) 70%);
+            top: -100px;
+            left: -100px;
+        }
+
+        .orb-2 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, #ec4899 0%, rgba(236, 72, 153, 0) 70%);
+            top: 200px;
+            right: -150px;
+            animation-delay: -3s;
+        }
+
+        .orb-3 {
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, #06b6d4 0%, rgba(6, 182, 212, 0) 70%);
+            bottom: 100px;
+            left: 20%;
+            animation-delay: -6s;
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.9) translate(0, 0); opacity: 0.35; }
+            100% { transform: scale(1.1) translate(30px, -20px); opacity: 0.55; }
+        }
+
+        /* Next-Gen Glassmorphism */
+        .glass-panel {
+            background: rgba(17, 24, 39, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-panel:hover {
+            background: rgba(31, 41, 55, 0.7);
+            border-color: rgba(236, 72, 153, 0.4);
+            box-shadow: 0 20px 40px rgba(236, 72, 153, 0.15), 0 0 20px rgba(139, 92, 246, 0.2);
             transform: translateY(-4px);
         }
 
-        /* Cursive Typography Styling */
-        .hero-cursive {
-            font-family: 'Pinyon Script', cursive;
-            background: linear-gradient(135deg, #ffd1ea 0%, #f472b6 50%, #e85d9e 100%);
+        /* Modern Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 20px rgba(232, 93, 158, 0.6));
         }
 
-        /* Gradient CTA Button */
-        .btn-gradient {
-            background: linear-gradient(135deg, #f472b6 0%, #a855f7 50%, #6366f1 100%);
-            box-shadow: 0 0 25px rgba(244, 114, 182, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+        /* Futuristic Pill Badge */
+        .pill-badge {
+            background: linear-gradient(90deg, rgba(236, 72, 153, 0.15), rgba(139, 92, 246, 0.15));
+            border: 1px solid rgba(236, 72, 153, 0.3);
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.1);
+        }
+
+        /* Neon Primary Button */
+        .btn-modern {
+            background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%);
+            box-shadow: 0 10px 30px -5px rgba(236, 72, 153, 0.5);
             transition: all 0.3s ease;
         }
 
-        .btn-gradient:hover {
-            transform: scale(1.04) translateY(-2px);
-            box-shadow: 0 0 35px rgba(244, 114, 182, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-        }
-
-        /* VHS / CRT Filter Overlay Effects */
-        .vhs-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            pointer-events: none;
-            z-index: 40;
-            background: linear-gradient(
-                rgba(18, 16, 16, 0) 50%, 
-                rgba(0, 0, 0, 0.25) 50%
-            ), linear-gradient(
-                90deg,
-                rgba(255, 0, 0, 0.03),
-                rgba(0, 255, 0, 0.01),
-                rgba(0, 0, 255, 0.03)
-            );
-            background-size: 100% 3px, 6px 100%;
-            box-shadow: inset 0 0 100px rgba(0,0,0,0.7);
-        }
-
-        /* VHS Tracking Line Glitch Animation */
-        .vhs-tracking-line {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.08);
-            opacity: 0.6;
-            pointer-events: none;
-            z-index: 41;
-            animation: vhsScan 8s linear infinite;
-        }
-
-        @keyframes vhsScan {
-            0% { top: -10px; }
-            100% { top: 105vh; }
+        .btn-modern:hover {
+            box-shadow: 0 15px 35px -5px rgba(236, 72, 153, 0.7), 0 0 15px rgba(139, 92, 246, 0.5);
+            transform: translateY(-2px) scale(1.02);
         }
 
         /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #0b0314; }
-        ::-webkit-scrollbar-thumb { background: #3b1254; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 9999px; }
+        ::-webkit-scrollbar-thumb:hover { background: #ec4899; }
     </style>
 </head>
-<body class="relative min-h-screen text-slate-100 flex flex-col justify-between">
+<body class="relative min-h-screen text-slate-100 flex flex-col justify-between bg-[#030712]">
 
-    <div class="fixed top-4 left-6 z-50 pointer-events-none font-vhs text-cyan-300 text-lg sm:text-xl tracking-widest flex items-center gap-3 drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">
-        <span class="inline-block w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
-        <span>PLAY</span>
-        <span id="vhs-timestamp" class="text-xs sm:text-sm text-pink-300 ml-2">00:00:00</span>
-    </div>
+    <!-- Background Animated Mesh Glows -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
 
-    <!-- VHS Scanline and CRT Glitch Overlay -->
-    <div class="vhs-overlay"></div>
-    <div class="vhs-tracking-line"></div>
-
-    <div class="relative w-full overflow-hidden">
-        <canvas id="sunset-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
-
+    <div class="relative w-full">
         <!-- Navigation Header -->
-        <header class="relative z-30 max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-            <div class="flex items-center gap-2 select-none">
-                <span class="text-pink-300 text-xl font-serif">✦</span>
-                <span class="font-cursive text-3xl md:text-4xl text-pink-200 tracking-wide">
-                    Nuestro Grupo
+        <header class="relative z-30 max-w-7xl mx-auto px-6 py-8 flex items-center justify-between">
+            <div class="flex items-center gap-3 select-none">
+                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-pink-500 to-violet-600 flex items-center justify-center text-white shadow-lg shadow-pink-500/30">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <span class="font-display font-extrabold text-2xl tracking-tight text-white">
+                    Nuestro<span class="gradient-text">Grupo</span>
                 </span>
             </div>
 
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
-                <a href="#hero" class="border-b-2 border-pink-400 pb-0.5 text-white" data-key="nav-inicio">Inicio</a>
-                <a href="#que-encontraras" class="hover:text-pink-300 transition-colors" data-key="nav-sobre">Sobre nosotros</a>
-                <a href="#nuestras-reglas" class="hover:text-pink-300 transition-colors" data-key="nav-reglas">Reglas</a>
-                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" class="hover:text-pink-300 transition-colors" data-key="nav-unete">Únete</a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#hero" class="text-white hover:text-pink-400 transition-colors" data-key="nav-inicio">Inicio</a>
+                <a href="#que-encontraras" class="hover:text-pink-400 transition-colors" data-key="nav-sobre">Sobre nosotros</a>
+                <a href="#nuestras-reglas" class="hover:text-pink-400 transition-colors" data-key="nav-reglas">Reglas</a>
+                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" class="hover:text-pink-400 transition-colors" data-key="nav-unete">Únete</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <!-- Selector de Idioma (20 Idiomas) -->
-                <select id="lang-select" class="bg-[#1e0b36]/90 border border-pink-500/40 text-pink-200 text-xs rounded-full px-3 py-1.5 focus:outline-none focus:border-pink-400 cursor-pointer backdrop-blur-md shadow-lg">
+                <!-- Selector de Idioma -->
+                <select id="lang-select" class="bg-gray-900/80 border border-gray-700/60 text-slate-200 text-xs rounded-xl px-3.5 py-2 focus:outline-none focus:border-pink-500 cursor-pointer backdrop-blur-xl shadow-inner transition-all">
                     <option value="es">🇪🇸 Español</option>
                     <option value="en">🇬🇧 English</option>
                     <option value="pt">🇧🇷 Português</option>
@@ -181,145 +180,164 @@
                     <option value="el">🇬🇷 Ελληνικά</option>
                 </select>
 
-                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-pink-300 transition-colors p-2" title="Instagram">
+                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900/60 border border-gray-800 flex items-center justify-center text-slate-300 hover:text-pink-400 hover:border-pink-500/50 transition-all" title="Instagram">
                     <i data-lucide="instagram" class="w-5 h-5"></i>
                 </a>
             </div>
         </header>
 
-        <section id="hero" class="relative z-20 max-w-4xl mx-auto px-6 pt-16 pb-36 text-center flex flex-col items-center justify-center">
+        <!-- Hero Section -->
+        <section id="hero" class="relative z-20 max-w-4xl mx-auto px-6 pt-16 pb-28 text-center flex flex-col items-center justify-center">
             
-            <div class="space-y-2 mb-6">
-                <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white tracking-wide">
+            <div class="space-y-4 mb-8">
+                <h1 class="font-display text-5xl sm:text-7xl md:text-8xl font-extrabold text-white tracking-tight leading-none">
                     <span data-key="hero-t1">Conecta.</span><br>
                     <span data-key="hero-t2">Comparte.</span><br>
-                    <span class="hero-cursive text-6xl sm:text-8xl md:text-9xl block -mt-2"><span data-key="hero-t3">Sé tú</span>. ♡</span>
+                    <span class="gradient-text font-serif italic block mt-2"><span data-key="hero-t3">Sé tú</span>. ♡</span>
                 </h1>
             </div>
 
-            <p class="max-w-md mx-auto text-sm sm:text-base text-slate-200 font-light leading-relaxed mb-8" data-key="hero-sub">
+            <p class="max-w-lg mx-auto text-base sm:text-lg text-slate-400 font-normal leading-relaxed mb-8" data-key="hero-sub">
                 Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.
             </p>
 
+            <!-- CAJA DE INSTRUCCIÓN DE PRESENTACIÓN -->
+            <div class="mb-10 px-6 py-3 rounded-full pill-badge backdrop-blur-xl inline-flex items-center gap-3 text-xs sm:text-sm font-medium text-pink-200">
+                <i data-lucide="shield-alert" class="w-4 h-4 text-pink-400"></i>
+                <span data-key="presentation-req">Para presentarte al entrar: Foto de 1 sola vez, edad, nombre y país.</span>
+            </div>
+
             <div class="flex flex-col items-center gap-3">
-                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="btn-gradient text-white font-semibold text-sm px-8 py-3.5 rounded-full inline-flex items-center gap-2.5 shadow-lg uppercase tracking-wider">
-                    <span>✦</span> <span data-key="btn-join">QUIERO UNIRME</span>
+                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="btn-modern text-white font-bold text-sm px-9 py-4 rounded-full inline-flex items-center gap-3 tracking-wider uppercase">
+                    <i data-lucide="arrow-right-circle" class="w-5 h-5"></i>
+                    <span data-key="btn-join">QUIERO UNIRME</span>
                 </a>
-                <span class="text-xs text-slate-300 font-light" data-key="cta-sub">Únete a nuestra comunidad</span>
+                <span class="text-xs text-slate-500 font-medium" data-key="cta-sub">Únete a nuestra comunidad</span>
             </div>
 
         </section>
     </div>
 
-    <section id="que-encontraras" class="relative z-20 py-16 px-6 bg-[#0a0214]/85 backdrop-blur-md">
-        <div class="max-w-5xl mx-auto text-center">
+    <!-- What You Find Section -->
+    <section id="que-encontraras" class="relative z-20 py-20 px-6">
+        <div class="max-w-6xl mx-auto text-center">
             
-            <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-12 inline-flex items-center gap-2">
-                <span data-key="sec-find">¿Qué encontrarás aquí?</span> <span class="text-pink-400 text-xl">✦</span>
+            <h2 class="font-display text-3xl sm:text-4xl text-white font-bold mb-16 inline-flex items-center gap-3">
+                <span data-key="sec-find">¿Qué encontrarás aquí?</span>
+                <span class="w-2.5 h-2.5 rounded-full bg-pink-500 animate-ping"></span>
             </h2>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="users" class="w-7 h-7"></i>
+                <div class="glass-panel p-8 rounded-3xl text-left flex flex-col justify-between space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
+                        <i data-lucide="users" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-key="f1-t">Nuevas amistades</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f1-d">
-                        Conoce personas increíbles como tú.
-                    </p>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg text-white mb-2" data-key="f1-t">Nuevas amistades</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-normal" data-key="f1-d">
+                            Conoce personas increíbles como tú.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="message-square" class="w-7 h-7"></i>
+                <div class="glass-panel p-8 rounded-3xl text-left flex flex-col justify-between space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+                        <i data-lucide="message-square" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-key="f2-t">Conversaciones</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f2-d">
-                        Comparte ideas, gustos y mucho más.
-                    </p>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg text-white mb-2" data-key="f2-t">Conversaciones</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-normal" data-key="f2-d">
+                            Comparte ideas, gustos y mucho más.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="star" class="w-7 h-7"></i>
+                <div class="glass-panel p-8 rounded-3xl text-left flex flex-col justify-between space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-key="f3-t">Diversión</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f3-d">
-                        Participa en dinámicas, juegos y eventos.
-                    </p>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg text-white mb-2" data-key="f3-t">Diversión</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-normal" data-key="f3-d">
+                            Participa en dinámicas, juegos y eventos.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                <div class="glass-panel p-8 rounded-3xl text-left flex flex-col justify-between space-y-6">
+                    <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-key="f4-t">Ambiente seguro</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f4-d">
-                        Respetamos a todos y cuidamos nuestra comunidad.
-                    </p>
+                    <div>
+                        <h3 class="font-display font-semibold text-lg text-white mb-2" data-key="f4-t">Ambiente seguro</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-normal" data-key="f4-d">
+                            Respetamos a todos y cuidamos nuestra comunidad.
+                        </p>
+                    </div>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="nuestras-reglas" class="relative z-20 py-20 px-6 bg-[#070110]">
+    <!-- Rules Section -->
+    <section id="nuestras-reglas" class="relative z-20 py-20 px-6">
         <div class="max-w-6xl mx-auto text-center">
             
-            <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-14 inline-flex items-center gap-2">
-                <i data-lucide="scroll" class="w-6 h-6 text-pink-400"></i>
-                <span data-key="sec-rules">Nuestras reglas</span> <span class="text-pink-400 text-xl">✦</span>
+            <h2 class="font-display text-3xl sm:text-4xl text-white font-bold mb-16 inline-flex items-center gap-3">
+                <i data-lucide="bookmark" class="w-8 h-8 text-violet-400"></i>
+                <span data-key="sec-rules">Nuestras reglas</span>
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
                 
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
+                <div class="glass-panel rounded-3xl p-6 flex flex-col items-center text-center space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400">
                         <i data-lucide="heart" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-key="r1-t">Respeto</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r1-d">
+                    <h3 class="font-display font-semibold text-sm text-white" data-key="r1-t">Respeto</h3>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-key="r1-d">
                         Trata a todos con respeto. No se toleran insultos ni discriminación.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="ban" class="w-6 h-6"></i>
+                <div class="glass-panel rounded-3xl p-6 flex flex-col items-center text-center space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400">
+                        <i data-lucide="slash" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-key="r2-t">No acoso</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r2-d">
+                    <h3 class="font-display font-semibold text-sm text-white" data-key="r2-t">No acoso</h3>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-key="r2-d">
                         No está permitido acosar, molestar o amenazar a otros miembros.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="shield" class="w-6 h-6"></i>
+                <div class="glass-panel rounded-3xl p-6 flex flex-col items-center text-center space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400">
+                        <i data-lucide="lock" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-key="r3-t">Contenido apropiado</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r3-d">
+                    <h3 class="font-display font-semibold text-sm text-white" data-key="r3-t">Contenido apropiado</h3>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-key="r3-d">
                         No se permite contenido sexual, violento o inapropiado.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="user" class="w-6 h-6"></i>
+                <div class="glass-card glass-panel rounded-3xl p-6 flex flex-col items-center text-center space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+                        <i data-lucide="user-check" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-key="r4-t">Edad</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r4-d">
+                    <h3 class="font-display font-semibold text-sm text-white" data-key="r4-t">Edad</h3>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-key="r4-d">
                         Este grupo es para jóvenes de 14 a 19 años.
                     </p>
                 </div>
 
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
+                <div class="glass-panel rounded-3xl p-6 flex flex-col items-center text-center space-y-4">
+                    <div class="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400">
+                        <i data-lucide="alert-octagon" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-key="r5-t">Incumplimiento</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r5-d">
+                    <h3 class="font-display font-semibold text-sm text-white" data-key="r5-t">Incumplimiento</h3>
+                    <p class="text-xs text-slate-400 font-normal leading-relaxed" data-key="r5-d">
                         Romper las reglas puede resultar en la expulsión del grupo.
                     </p>
                 </div>
@@ -328,16 +346,17 @@
         </div>
     </section>
 
-    <footer class="relative z-20 py-16 px-6 border-t border-white/5 bg-[#04000a] text-center space-y-6">
-        <p class="font-cursive text-3xl sm:text-4xl text-pink-300" data-key="footer-quote">
-            ✦ "Sé tú, conecta, comparte y brilla." ♡
+    <!-- Footer -->
+    <footer class="relative z-20 py-16 px-6 border-t border-gray-900 bg-black/40 text-center space-y-6">
+        <p class="font-serif text-3xl sm:text-4xl gradient-text italic" data-key="footer-quote">
+            ✦ "<i class="italic">Sé tú</i>, conecta, comparte y brilla." ♡
         </p>
 
         <div class="flex items-center justify-center gap-6">
-            <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-pink-300 hover:border-pink-400 transition-colors">
+            <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-2xl bg-gray-900 border border-gray-800 flex items-center justify-center text-pink-400 hover:border-pink-500/50 hover:bg-pink-500/10 transition-all">
                 <i data-lucide="instagram" class="w-5 h-5"></i>
             </a>
-            <a href="mailto:comunidad@nuestrogrupo.org" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-pink-300 hover:border-pink-400 transition-colors">
+            <a href="mailto:comunidad@nuestrogrupo.org" class="w-11 h-11 rounded-2xl bg-gray-900 border border-gray-800 flex items-center justify-center text-violet-400 hover:border-violet-500/50 hover:bg-violet-500/10 transition-all">
                 <i data-lucide="mail" class="w-5 h-5"></i>
             </a>
         </div>
@@ -346,17 +365,15 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             lucide.createIcons();
-            initSunsetCanvas();
-            initVhsTimestamp();
             initTranslationSystem();
         });
 
-        // 20-Language Dictionary
         const translations = {
             es: {
                 "nav-inicio": "Inicio", "nav-sobre": "Sobre nosotros", "nav-reglas": "Reglas", "nav-unete": "Únete",
                 "hero-t1": "Conecta.", "hero-t2": "Comparte.", "hero-t3": "Sé tú",
                 "hero-sub": "Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.",
+                "presentation-req": "Para presentarte al entrar: Foto de 1 sola vez, edad, nombre y país.",
                 "btn-join": "QUIERO UNIRME", "cta-sub": "Únete a nuestra comunidad",
                 "sec-find": "¿Qué encontrarás aquí?",
                 "f1-t": "Nuevas amistades", "f1-d": "Conoce personas increíbles como tú.",
@@ -369,12 +386,13 @@
                 "r3-t": "Contenido apropiado", "r3-d": "No se permite contenido sexual, violento o inapropiado.",
                 "r4-t": "Edad", "r4-d": "Este grupo es para jóvenes de 14 a 19 años.",
                 "r5-t": "Incumplimiento", "r5-d": "Romper las reglas puede resultar en la expulsión del grupo.",
-                "footer-quote": "✦ \"Sé tú, conecta, comparte y brilla.\" ♡"
+                "footer-quote": "✦ \"<i class='italic'>Sé tú</i>, conecta, comparte y brilla.\" ♡"
             },
             en: {
                 "nav-inicio": "Home", "nav-sobre": "About us", "nav-reglas": "Rules", "nav-unete": "Join",
                 "hero-t1": "Connect.", "hero-t2": "Share.", "hero-t3": "Be yourself",
                 "hero-sub": "A place for teens aged 14 to 19 who want to meet new people, make friends, and create memories.",
+                "presentation-req": "To introduce yourself upon joining: View-once photo, age, name, and country.",
                 "btn-join": "I WANT TO JOIN", "cta-sub": "Join our community",
                 "sec-find": "What will you find here?",
                 "f1-t": "New Friendships", "f1-d": "Meet amazing people just like you.",
@@ -387,12 +405,13 @@
                 "r3-t": "Appropriate Content", "r3-d": "No sexual, violent or inappropriate content allowed.",
                 "r4-t": "Age", "r4-d": "This group is for youth aged 14 to 19.",
                 "r5-t": "Non-compliance", "r5-d": "Breaking the rules may result in expulsion from the group.",
-                "footer-quote": "✦ \"Be yourself, connect, share and shine.\" ♡"
+                "footer-quote": "✦ \"<i class='italic'>Be yourself</i>, connect, share and shine.\" ♡"
             },
             pt: {
                 "nav-inicio": "Início", "nav-sobre": "Sobre nós", "nav-reglas": "Regras", "nav-unete": "Participe",
                 "hero-t1": "Conecte.", "hero-t2": "Compartilhe.", "hero-t3": "Seja você",
                 "hero-sub": "Um lugar para jovens de 14 a 19 anos que querem conhecer gente nova, fazer amigos e criar memórias.",
+                "presentation-req": "Para se apresentar ao entrar: Foto de visualização única, idade, nome e país.",
                 "btn-join": "QUERO PARTICIPAR", "cta-sub": "Junte-se à nossa comunidade",
                 "sec-find": "O que você encontrará aqui?",
                 "f1-t": "Novas amizades", "f1-d": "Conheça pessoas incríveis como você.",
@@ -411,6 +430,7 @@
                 "nav-inicio": "Accueil", "nav-sobre": "À propos", "nav-reglas": "Règles", "nav-unete": "Rejoindre",
                 "hero-t1": "Connecte.", "hero-t2": "Partage.", "hero-t3": "Sois toi",
                 "hero-sub": "Un endroit pour les jeunes de 14 à 19 ans qui veulent faire de nouvelles connaissances et créer des souvenirs.",
+                "presentation-req": "Pour te présenter en entrant : Photo à vue unique, âge, prénom et pays.",
                 "btn-join": "JE VEUX REJOINDRE", "cta-sub": "Rejoignez notre communauté",
                 "sec-find": "Que trouverez-vous ici ?",
                 "f1-t": "Nouvelles amitiés", "f1-d": "Rencontrez des gens incroyables comme vous.",
@@ -429,6 +449,7 @@
                 "nav-inicio": "Startseite", "nav-sobre": "Über uns", "nav-reglas": "Regeln", "nav-unete": "Beitreten",
                 "hero-t1": "Verbinde.", "hero-t2": "Teile.", "hero-t3": "Sei du selbst",
                 "hero-sub": "Ein Ort für Jugendliche von 14 bis 19 Jahren, die neue Leute kennenlernen und Erinnerungen schaffen möchten.",
+                "presentation-req": "Zur Vorstellung beim Beitritt: Einmal-Foto, Alter, Name und Land.",
                 "btn-join": "ICH MÖCHTE BEITRETEN", "cta-sub": "Werde Teil unserer Community",
                 "sec-find": "Was wirst du hier finden?",
                 "f1-t": "Neue Freundschaften", "f1-d": "Lerne tolle Leute wie dich kennen.",
@@ -447,6 +468,7 @@
                 "nav-inicio": "Home", "nav-sobre": "Chi siamo", "nav-reglas": "Regole", "nav-unete": "Unisciti",
                 "hero-t1": "Connettiti.", "hero-t2": "Condividi.", "hero-t3": "Sii te stesso",
                 "hero-sub": "Un luogo per giovani dai 14 ai 19 anni che vogliono conoscere nuove persone e creare ricordi.",
+                "presentation-req": "Per presentarti quando entri: Foto monouso, età, nome e paese.",
                 "btn-join": "VOGLIO UNIRMI", "cta-sub": "Unisciti alla nostra community",
                 "sec-find": "Cosa troverai qui?",
                 "f1-t": "Nuove amicizie", "f1-d": "Incontra persone incredibili come te.",
@@ -465,6 +487,7 @@
                 "nav-inicio": "ホーム", "nav-sobre": "私たちについて", "nav-reglas": "ルール", "nav-unete": "参加する",
                 "hero-t1": "つながる。", "hero-t2": "共有する。", "hero-t3": "自分らしく",
                 "hero-sub": "14歳から19歳までの若い世代が新しい友達を作り、思い出を作るための場所。",
+                "presentation-req": "参加時の自己紹介: 1回表示写真、年齢、名前、国籍。",
                 "btn-join": "参加したい", "cta-sub": "コミュニティに参加しよう",
                 "sec-find": "ここで見つかるもの",
                 "f1-t": "新しい友達", "f1-d": "あなたのような素晴らしい人たちに出会おう。",
@@ -483,6 +506,7 @@
                 "nav-inicio": "홈", "nav-sobre": "소개", "nav-reglas": "규칙", "nav-unete": "가입하기",
                 "hero-t1": "연결.", "hero-t2": "공유.", "hero-t3": "너답게",
                 "hero-sub": "14세부터 19세까지의 청소년들이 새로운 친구를 사귀고 추억을 만드는 공간.",
+                "presentation-req": "입장 시 자기소개: 1회용 사진, 나이, 이름, 국가.",
                 "btn-join": "참여하기", "cta-sub": "커뮤니티에 가입하세요",
                 "sec-find": "여기서 무엇을 찾을 수 있나요?",
                 "f1-t": "새로운 우정", "f1-d": "멋진 사람들과 만나보세요.",
@@ -501,6 +525,7 @@
                 "nav-inicio": "首页", "nav-sobre": "关于我们", "nav-reglas": "规则", "nav-unete": "加入",
                 "hero-t1": "连接。", "hero-t2": "分享。", "hero-t3": "做你自己",
                 "hero-sub": "专为14至19岁青少年打造的交友与创造美好回忆的专属空间。",
+                "presentation-req": "进群自我介绍要求：单次查看照片、年龄、名字和国家。",
                 "btn-join": "我想加入", "cta-sub": "加入我们的社区",
                 "sec-find": "在这里你能找到什么？",
                 "f1-t": "新友谊", "f1-d": "结识像你一样优秀的朋友。",
@@ -519,6 +544,7 @@
                 "nav-inicio": "Главная", "nav-sobre": "О нас", "nav-reglas": "Правила", "nav-unete": "Вступить",
                 "hero-t1": "Общайся.", "hero-t2": "Делись.", "hero-t3": "Будь собой",
                 "hero-sub": "Место для подростков от 14 до 19 лет, которые хотят найти новых друзей и создать воспоминания.",
+                "presentation-req": "Для знакомства при входе: Одноразовое фото, возраст, имя и страна.",
                 "btn-join": "ХОЧУ ВСТУПИТЬ", "cta-sub": "Присоединяйся к нашему сообществу",
                 "sec-find": "Что ты здесь найдешь?",
                 "f1-t": "Новые знакомства", "f1-d": "Встречай потрясающих людей, таких же как ты.",
@@ -537,6 +563,7 @@
                 "nav-inicio": "الرئيسية", "nav-sobre": "معلومات عنا", "nav-reglas": "القواعد", "nav-unete": "انضم",
                 "hero-t1": "تواصل.", "hero-t2": "شارك.", "hero-t3": "كن أنت",
                 "hero-sub": "مكان للشباب من عمر 14 إلى 19 عاماً للتعرف على أشخاص جدد وتكوين ذكريات.",
+                "presentation-req": "للتعريف بنفسك عند الانضمام: صورة للعرض مرة واحدة، العمر، الاسم، والدولة.",
                 "btn-join": "أريد الانضمام", "cta-sub": "انضم إلى مجتمعنا",
                 "sec-find": "ماذا ستجد هنا؟",
                 "f1-t": "صداقات جديدة", "f1-d": "تعرف على أشخاص رائعين يشاركونك اهتماماتك.",
@@ -548,13 +575,14 @@
                 "r2-t": "لا تنمر", "r2-d": "يمنع مضايقة أو تهديد الأعضاء الآخرين.",
                 "r3-t": "محتوى مناسب", "r3-d": "يمنع نشر محتوى جنسي أو عنيف أو غير لائق.",
                 "r4-t": "العمر", "r4-d": "هذا المجموعة مخصصة لمن تتراوح أعمارهم بين 14 و 19 عاماً.",
-                "r5-t": "مخالفة القواعد", "r5-d": "خرق القواعد قد يؤدي إلى الطرد من المجموعة.",
+                "r5-t": "مخالفة القواعد", "r5-d": "خرق القواعد قد تؤدي إلى الطرد من المجموعة.",
                 "footer-quote": "✦ \"كن أنت، تواصل، شارك وتألق.\" ♡"
             },
             hi: {
                 "nav-inicio": "होम", "nav-sobre": "हमारे बारे में", "nav-reglas": "नियम", "nav-unete": "शामिल हों",
                 "hero-t1": "जुड़ें।", "hero-t2": "साझा करें।", "hero-t3": "खुद बनो",
                 "hero-sub": "14 से 19 वर्ष के युवाओं के लिए एक जगह जो नए दोस्त बनाना चाहते हैं।",
+                "presentation-req": "शामिल होने पर अपना परिचय दें: एक बार देखी जाने वाली फ़ोटो, उम्र, नाम और देश।",
                 "btn-join": "मैं जुड़ना चाहता हूँ", "cta-sub": "हमारे समुदाय से जुड़ें",
                 "sec-find": "आपको यहाँ क्या मिलेगा?",
                 "f1-t": "नई दोस्ती", "f1-d": "अपने जैसे अद्भुत लोगों से मिलें।",
@@ -573,6 +601,7 @@
                 "nav-inicio": "Home", "nav-sobre": "Over ons", "nav-reglas": "Regels", "nav-unete": "Word lid",
                 "hero-t1": "Verbind.", "hero-t2": "Deel.", "hero-t3": "Wees jezelf",
                 "hero-sub": "Een plek voor jongeren van 14 tot 19 jaar die nieuwe mensen willen ontmoeten.",
+                "presentation-req": "Om jezelf voor te stellen bij binnenkomst: Eenmalige foto, leeftijd, naam en land.",
                 "btn-join": "IK WIL LID WORDEN", "cta-sub": "Sluit je aan bij onze community",
                 "sec-find": "Wat vind je hier?",
                 "f1-t": "Nieuwe vriendschappen", "f1-d": "Ontmoet geweldige mensen zoals jij.",
@@ -591,6 +620,7 @@
                 "nav-inicio": "Strona główna", "nav-sobre": "O nas", "nav-reglas": "Zasady", "nav-unete": "Dołącz",
                 "hero-t1": "Połącz się.", "hero-t2": "Dziel się.", "hero-t3": "Bądź sobą",
                 "hero-sub": "Miejsce dla nastolatków w wieku 14-19 lat, którzy chcą poznać nowych ludzi.",
+                "presentation-req": "Przedstaw się po dołączeniu: Jednorazowe zdjęcie, wiek, imię i kraj.",
                 "btn-join": "CHCĘ DOŁĄCZYĆ", "cta-sub": "Dołącz do naszej społeczności",
                 "sec-find": "Co tu znajdziesz?",
                 "f1-t": "Nowe przyjaźnie", "f1-d": "Poznaj niesamowitych ludzi takich jak Ty.",
@@ -609,6 +639,7 @@
                 "nav-inicio": "Ana Sayfa", "nav-sobre": "Hakkımızda", "nav-reglas": "Kurallar", "nav-unete": "Katıl",
                 "hero-t1": "Bağlan.", "hero-t2": "Paylaş.", "hero-t3": "Kendin ol",
                 "hero-sub": "Yeni insanlarla tanışmak isteyen 14-19 yaş arası gençler için bir yer.",
+                "presentation-req": "Katıldığınızda kendinizi tanıtın: Tek gösterimlik fotoğraf, yaş, isim ve ülke.",
                 "btn-join": "KATILMAK İSTİYORUM", "cta-sub": "Topluluğumuza katıl",
                 "sec-find": "Burada ne bulacaksın?",
                 "f1-t": "Yeni dostluklar", "f1-d": "Senin gibi harika insanlarla tanış.",
@@ -627,6 +658,7 @@
                 "nav-inicio": "Trang chủ", "nav-sobre": "Về chúng tôi", "nav-reglas": "Quy tắc", "nav-unete": "Tham gia",
                 "hero-t1": "Kết nối.", "hero-t2": "Chia sẻ.", "hero-t3": "Là chính mình",
                 "hero-sub": "Nơi dành cho các bạn trẻ từ 14 đến 19 tuổi muốn kết bạn mới.",
+                "presentation-req": "Yêu cầu giới thiệu khi tham gia: Ảnh xem 1 lần, tuổi, tên và quốc gia.",
                 "btn-join": "TÔI MUỐN THAM GIA", "cta-sub": "Tham gia cộng đồng của chúng tôi",
                 "sec-find": "Bạn sẽ tìm thấy gì ở đây?",
                 "f1-t": "Tình bạn mới", "f1-d": "Gặp gỡ những người bạn tuyệt vời.",
@@ -645,6 +677,7 @@
                 "nav-inicio": "Beranda", "nav-sobre": "Tentang", "nav-reglas": "Aturan", "nav-unete": "Gabung",
                 "hero-t1": "Terhubung.", "hero-t2": "Berbagi.", "hero-t3": "Jadilah dirimu",
                 "hero-sub": "Tempat bagi remaja usia 14 hingga 19 tahun yang ingin kenal orang baru.",
+                "presentation-req": "Syarat perkenalan saat bergabung: Foto sekali lihat, usia, nama, dan negara.",
                 "btn-join": "SAYA INGIN BERGABUNG", "cta-sub": "Bergabunglah dengan komunitas kami",
                 "sec-find": "Apa yang kamu temukan di sini?",
                 "f1-t": "Pertemanan baru", "f1-d": "Temui orang-orang hebat seperti kamu.",
@@ -663,6 +696,7 @@
                 "nav-inicio": "Головна", "nav-sobre": "Про нас", "nav-reglas": "Правила", "nav-unete": "Приєднатися",
                 "hero-t1": "Зв'язуйся.", "hero-t2": "Ділися.", "hero-t3": "Будь собою",
                 "hero-sub": "Місце для підлітків від 14 до 19 років, які хочуть знаходити нових друзів.",
+                "presentation-req": "Для знайомства при вході: Одноразове фото, вік, ім'я та країна.",
                 "btn-join": "ХОЧУ ПРИЄДНАТИСЬ", "cta-sub": "Приєднуйся до нашої спільноти",
                 "sec-find": "Що ти тут знайдеш?",
                 "f1-t": "Нові друзі", "f1-d": "Зустрічай чудових людей, схожих на тебе.",
@@ -681,6 +715,7 @@
                 "nav-inicio": "Hem", "nav-sobre": "Om oss", "nav-reglas": "Regler", "nav-unete": "Gå med",
                 "hero-t1": "Anslut.", "hero-t2": "Dela.", "hero-t3": "Var dig själv",
                 "hero-sub": "En plats för ungdomar mellan 14 och 19 år som vill träffa nya vänner.",
+                "presentation-req": "För att presentar dig vid inträde: Engångsbild, ålder, namn och land.",
                 "btn-join": "JAG VILL GÅ MED", "cta-sub": "Gå med i vår gemenskap",
                 "sec-find": "Vad hittar du här?",
                 "f1-t": "Nya vänskaper", "f1-d": "Träffa fantastiska människor precis som du.",
@@ -699,6 +734,7 @@
                 "nav-inicio": "Αρχική", "nav-sobre": "Σχετικά", "nav-reglas": "Κανόνες", "nav-unete": "Γίνε μέλος",
                 "hero-t1": "Συνδέσου.", "hero-t2": "Μοιράσου.", "hero-t3": "Γίνε ο εαυτός σου",
                 "hero-sub": "Ένα μέρος για νέους 14 έως 19 ετών που θέλουν να γνωρίσουν κόσμο.",
+                "presentation-req": "Για να συστηθείτε κατά την είσοδο: Φωτογραφία μιας προβολής, ηλικία, όνομα και χώρα.",
                 "btn-join": "ΘΕΛΩ ΝΑ ΣΥΜΜΕΤΕΧΩ", "cta-sub": "Γίνε μέλος της κοινότητάς μας",
                 "sec-find": "Τι θα βρεις εδώ;",
                 "f1-t": "Νέες φιλίες", "f1-d": "Γνώρισε καταπληκτικά άτομα σαν εσένα.",
@@ -724,123 +760,10 @@
                 document.querySelectorAll('[data-key]').forEach(elem => {
                     const key = elem.getAttribute('data-key');
                     if (dict[key]) {
-                        elem.textContent = dict[key];
+                        elem.innerHTML = dict[key];
                     }
                 });
             });
-        }
-
-        // VHS Live Timestamp Counter
-        function initVhsTimestamp() {
-            let seconds = 0;
-            const el = document.getElementById('vhs-timestamp');
-            setInterval(() => {
-                seconds++;
-                const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
-                const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
-                const secs = String(seconds % 60).padStart(2, '0');
-                el.textContent = `${hrs}:${mins}:${secs}`;
-            }, 1000);
-        }
-
-        // Pure Sunset Sky Canvas Render (No horizon, No city, No moon)
-        function initSunsetCanvas() {
-            const canvas = document.getElementById('sunset-canvas');
-            const ctx = canvas.getContext('2d');
-            let stars = [];
-            let clouds = [];
-
-            function resize() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-                initStars();
-                initClouds();
-            }
-
-            // Generate realistic dispersed twinkling stars
-            function initStars() {
-                stars = [];
-                const numStars = Math.floor((canvas.width * canvas.height) / 3200);
-                for (let i = 0; i < numStars; i++) {
-                    stars.push({
-                        x: Math.random() * canvas.width,
-                        y: Math.random() * (canvas.height * 0.75),
-                        radius: Math.random() * 1.6 + 0.3,
-                        alpha: Math.random() * 0.8 + 0.2,
-                        speed: Math.random() * 0.02 + 0.005,
-                        phase: Math.random() * Math.PI * 2
-                    });
-                }
-            }
-
-            // Soft atmospheric twilight cloud layers
-            function initClouds() {
-                clouds = [];
-                for (let i = 0; i < 6; i++) {
-                    clouds.push({
-                        x: Math.random() * canvas.width,
-                        y: canvas.height * 0.35 + Math.random() * (canvas.height * 0.45),
-                        width: canvas.width * (0.4 + Math.random() * 0.5),
-                        height: 80 + Math.random() * 100,
-                        speed: 0.15 + Math.random() * 0.2,
-                        alpha: 0.15 + Math.random() * 0.15
-                    });
-                }
-            }
-
-            function animate() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-                // Pure Twilight Sunset Sky Gradient
-                const skyGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-                skyGrad.addColorStop(0, '#0d041c');     // Deep Night Purple
-                skyGrad.addColorStop(0.32, '#230a3b');  // Violet Twilight
-                skyGrad.addColorStop(0.60, '#591653');  // Deep Magenta
-                skyGrad.addColorStop(0.82, '#b2396c');  // Vibrant Pink Sunset
-                skyGrad.addColorStop(1, '#e3687c');     // Warm Peach Sunset Glow
-                ctx.fillStyle = skyGrad;
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-                // Render Dispersed Realistic Stars
-                stars.forEach(s => {
-                    s.phase += s.speed;
-                    const tw = Math.sin(s.phase) * 0.35;
-                    const currentAlpha = Math.min(1, Math.max(0.1, s.alpha + tw));
-
-                    ctx.beginPath();
-                    ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-                    ctx.fillStyle = `rgba(255, 235, 245, ${currentAlpha})`;
-                    ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
-                    ctx.shadowBlur = s.radius > 1.2 ? 6 : 2;
-                    ctx.fill();
-                    ctx.shadowBlur = 0;
-                });
-
-                // Render Drifting Twilight Cloud Layers
-                clouds.forEach(c => {
-                    c.x += c.speed;
-                    if (c.x - c.width > canvas.width) c.x = -c.width;
-
-                    const cloudGrad = ctx.createRadialGradient(
-                        c.x, c.y, 10,
-                        c.x, c.y, c.width / 2
-                    );
-                    cloudGrad.addColorStop(0, `rgba(180, 50, 110, ${c.alpha})`);
-                    cloudGrad.addColorStop(0.6, `rgba(80, 20, 70, ${c.alpha * 0.5})`);
-                    cloudGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-
-                    ctx.fillStyle = cloudGrad;
-                    ctx.beginPath();
-                    ctx.ellipse(c.x, c.y, c.width / 2, c.height / 2, 0, 0, Math.PI * 2);
-                    ctx.fill();
-                });
-
-                requestAnimationFrame(animate);
-            }
-
-            window.addEventListener('resize', resize);
-            resize();
-            animate();
         }
     </script>
 </body>

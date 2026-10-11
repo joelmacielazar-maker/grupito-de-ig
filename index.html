@@ -150,15 +150,15 @@
             </div>
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
-                <a href="#hero" class="border-b-2 border-pink-400 pb-0.5 text-white" data-translate="nav-inicio">Inicio</a>
-                <a href="#que-encontraras" class="hover:text-pink-300 transition-colors" data-translate="nav-sobre">Sobre nosotros</a>
-                <a href="#nuestras-reglas" class="hover:text-pink-300 transition-colors" data-translate="nav-reglas">Reglas</a>
-                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" class="hover:text-pink-300 transition-colors" data-translate="nav-unete">Únete</a>
+                <a href="#hero" class="border-b-2 border-pink-400 pb-0.5 text-white" data-key="nav-inicio">Inicio</a>
+                <a href="#que-encontraras" class="hover:text-pink-300 transition-colors" data-key="nav-sobre">Sobre nosotros</a>
+                <a href="#nuestras-reglas" class="hover:text-pink-300 transition-colors" data-key="nav-reglas">Reglas</a>
+                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" class="hover:text-pink-300 transition-colors" data-key="nav-unete">Únete</a>
             </nav>
 
             <div class="flex items-center gap-4">
-                <!-- 20-Language Translator Widget -->
-                <select id="language-select" class="bg-[#1e0b36]/90 border border-pink-500/40 text-pink-200 text-xs rounded-full px-3 py-1.5 focus:outline-none focus:border-pink-400 cursor-pointer backdrop-blur-md shadow-lg">
+                <!-- Selector de Idioma (20 Idiomas) -->
+                <select id="lang-select" class="bg-[#1e0b36]/90 border border-pink-500/40 text-pink-200 text-xs rounded-full px-3 py-1.5 focus:outline-none focus:border-pink-400 cursor-pointer backdrop-blur-md shadow-lg">
                     <option value="es">🇪🇸 Español</option>
                     <option value="en">🇬🇧 English</option>
                     <option value="pt">🇧🇷 Português</option>
@@ -191,32 +191,31 @@
             
             <div class="space-y-2 mb-6">
                 <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white tracking-wide">
-                    <span data-translate="hero-t1">Conecta.</span><br>
-                    <span data-translate="hero-t2">Comparte.</span><br>
-                    <span class="hero-cursive text-6xl sm:text-8xl md:text-9xl block -mt-2">Sé <span style="font-family: 'Pinyon Script', cursive; font-style: italic; font-weight: 400;">tú</span>. ♡</span>
+                    <span data-key="hero-t1">Conecta.</span><br>
+                    <span data-key="hero-t2">Comparte.</span><br>
+                    <span class="hero-cursive text-6xl sm:text-8xl md:text-9xl block -mt-2"><span data-key="hero-t3">Sé tú</span>. ♡</span>
                 </h1>
             </div>
 
-            <p class="max-w-md mx-auto text-sm sm:text-base text-slate-200 font-light leading-relaxed mb-8" data-translate="hero-sub">
+            <p class="max-w-md mx-auto text-sm sm:text-base text-slate-200 font-light leading-relaxed mb-8" data-key="hero-sub">
                 Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.
             </p>
 
             <div class="flex flex-col items-center gap-3">
                 <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="btn-gradient text-white font-semibold text-sm px-8 py-3.5 rounded-full inline-flex items-center gap-2.5 shadow-lg uppercase tracking-wider">
-                    <span>✦</span> <span data-translate="btn-unirse">QUIERO UNIRME</span>
+                    <span>✦</span> <span data-key="btn-join">QUIERO UNIRME</span>
                 </a>
-                <span class="text-xs text-slate-300 font-light" data-translate="cta-sub">Únete a nuestra comunidad</span>
+                <span class="text-xs text-slate-300 font-light" data-key="cta-sub">Únete a nuestra comunidad</span>
             </div>
 
         </section>
     </div>
 
-    <!-- What you find section -->
     <section id="que-encontraras" class="relative z-20 py-16 px-6 bg-[#0a0214]/85 backdrop-blur-md">
         <div class="max-w-5xl mx-auto text-center">
             
             <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-12 inline-flex items-center gap-2">
-                <span data-translate="sec-find">¿Qué encontrarás aquí?</span> <span class="text-pink-400 text-xl">✦</span>
+                <span data-key="sec-find">¿Qué encontrarás aquí?</span> <span class="text-pink-400 text-xl">✦</span>
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -225,8 +224,8 @@
                     <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="users" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-translate="f1-title">Nuevas amistades</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-translate="f1-desc">
+                    <h3 class="font-medium text-base text-white" data-key="f1-t">Nuevas amistades</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f1-d">
                         Conoce personas increíbles como tú.
                     </p>
                 </div>
@@ -235,8 +234,8 @@
                     <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="message-square" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-translate="f2-title">Conversaciones</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-translate="f2-desc">
+                    <h3 class="font-medium text-base text-white" data-key="f2-t">Conversaciones</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f2-d">
                         Comparte ideas, gustos y mucho más.
                     </p>
                 </div>
@@ -245,8 +244,8 @@
                     <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="star" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-translate="f3-title">Diversión</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-translate="f3-desc">
+                    <h3 class="font-medium text-base text-white" data-key="f3-t">Diversión</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f3-d">
                         Participa en dinámicas, juegos y eventos.
                     </p>
                 </div>
@@ -255,8 +254,8 @@
                     <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="shield-check" class="w-7 h-7"></i>
                     </div>
-                    <h3 class="font-medium text-base text-white" data-translate="f4-title">Ambiente seguro</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-translate="f4-desc">
+                    <h3 class="font-medium text-base text-white" data-key="f4-t">Ambiente seguro</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light" data-key="f4-d">
                         Respetamos a todos y cuidamos nuestra comunidad.
                     </p>
                 </div>
@@ -265,13 +264,12 @@
         </div>
     </section>
 
-    <!-- Rules Section -->
     <section id="nuestras-reglas" class="relative z-20 py-20 px-6 bg-[#070110]">
         <div class="max-w-6xl mx-auto text-center">
             
             <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-14 inline-flex items-center gap-2">
                 <i data-lucide="scroll" class="w-6 h-6 text-pink-400"></i>
-                <span data-translate="sec-rules">Nuestras reglas</span> <span class="text-pink-400 text-xl">✦</span>
+                <span data-key="sec-rules">Nuestras reglas</span> <span class="text-pink-400 text-xl">✦</span>
             </h2>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
@@ -280,8 +278,8 @@
                     <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="heart" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-translate="r1-title">Respeto</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-translate="r1-desc">
+                    <h3 class="font-medium text-sm text-white" data-key="r1-t">Respeto</h3>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r1-d">
                         Trata a todos con respeto. No se toleran insultos ni discriminación.
                     </p>
                 </div>
@@ -290,8 +288,8 @@
                     <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="ban" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-translate="r2-title">No acoso</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-translate="r2-desc">
+                    <h3 class="font-medium text-sm text-white" data-key="r2-t">No acoso</h3>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r2-d">
                         No está permitido acosar, molestar o amenazar a otros miembros.
                     </p>
                 </div>
@@ -300,8 +298,8 @@
                     <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="shield" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-translate="r3-title">Contenido apropiado</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-translate="r3-desc">
+                    <h3 class="font-medium text-sm text-white" data-key="r3-t">Contenido apropiado</h3>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r3-d">
                         No se permite contenido sexual, violento o inapropiado.
                     </p>
                 </div>
@@ -310,8 +308,8 @@
                     <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="user" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-translate="r4-title">Edad</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-translate="r4-desc">
+                    <h3 class="font-medium text-sm text-white" data-key="r4-t">Edad</h3>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r4-d">
                         Este grupo es para jóvenes de 14 a 19 años.
                     </p>
                 </div>
@@ -320,8 +318,8 @@
                     <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
                         <i data-lucide="alert-triangle" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="font-medium text-sm text-white" data-translate="r5-title">Incumplimiento</h3>
-                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-translate="r5-desc">
+                    <h3 class="font-medium text-sm text-white" data-key="r5-t">Incumplimiento</h3>
+                    <p class="text-xs text-slate-300 font-light leading-relaxed" data-key="r5-d">
                         Romper las reglas puede resultar en la expulsión del grupo.
                     </p>
                 </div>
@@ -330,9 +328,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="relative z-20 py-16 px-6 border-t border-white/5 bg-[#04000a] text-center space-y-6">
-        <p class="font-cursive text-3xl sm:text-4xl text-pink-300" data-translate="footer-quote">
+        <p class="font-cursive text-3xl sm:text-4xl text-pink-300" data-key="footer-quote">
             ✦ "Sé tú, conecta, comparte y brilla." ♡
         </p>
 
@@ -351,363 +348,383 @@
             lucide.createIcons();
             initSunsetCanvas();
             initVhsTimestamp();
-            initTranslator();
+            initTranslationSystem();
         });
 
-        // Full 20-Language Translator Dictionary
-        const dict = {
+        // 20-Language Dictionary
+        const translations = {
             es: {
                 "nav-inicio": "Inicio", "nav-sobre": "Sobre nosotros", "nav-reglas": "Reglas", "nav-unete": "Únete",
-                "hero-t1": "Conecta.", "hero-t2": "Comparte.", "hero-sub": "Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.",
-                "btn-unirse": "QUIERO UNIRME", "cta-sub": "Únete a nuestra comunidad",
+                "hero-t1": "Conecta.", "hero-t2": "Comparte.", "hero-t3": "Sé tú",
+                "hero-sub": "Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.",
+                "btn-join": "QUIERO UNIRME", "cta-sub": "Únete a nuestra comunidad",
                 "sec-find": "¿Qué encontrarás aquí?",
-                "f1-title": "Nuevas amistades", "f1-desc": "Conoce personas increíbles como tú.",
-                "f2-title": "Conversaciones", "f2-desc": "Comparte ideas, gustos y mucho más.",
-                "f3-title": "Diversión", "f3-desc": "Participa en dinámicas, juegos y eventos.",
-                "f4-title": "Ambiente seguro", "f4-desc": "Respetamos a todos y cuidamos nuestra comunidad.",
+                "f1-t": "Nuevas amistades", "f1-d": "Conoce personas increíbles como tú.",
+                "f2-t": "Conversaciones", "f2-d": "Comparte ideas, gustos y mucho más.",
+                "f3-t": "Diversión", "f3-d": "Participa en dinámicas, juegos y eventos.",
+                "f4-t": "Ambiente seguro", "f4-d": "Respetamos a todos y cuidamos nuestra comunidad.",
                 "sec-rules": "Nuestras reglas",
-                "r1-title": "Respeto", "r1-desc": "Trata a todos con respeto. No se toleran insultos ni discriminación.",
-                "r2-title": "No acoso", "r2-desc": "No está permitido acosar, molestar o amenazar a otros miembros.",
-                "r3-title": "Contenido apropiado", "r3-desc": "No se permite contenido sexual, violento o inapropiado.",
-                "r4-title": "Edad", "r4-desc": "Este grupo es para jóvenes de 14 a 19 años.",
-                "r5-title": "Incumplimiento", "r5-desc": "Romper las reglas puede resultar en la expulsión del grupo.",
+                "r1-t": "Respeto", "r1-d": "Trata a todos con respeto. No se toleran insultos ni discriminación.",
+                "r2-t": "No acoso", "r2-d": "No está permitido acosar, molestar o amenazar a otros miembros.",
+                "r3-t": "Contenido apropiado", "r3-d": "No se permite contenido sexual, violento o inapropiado.",
+                "r4-t": "Edad", "r4-d": "Este grupo es para jóvenes de 14 a 19 años.",
+                "r5-t": "Incumplimiento", "r5-d": "Romper las reglas puede resultar en la expulsión del grupo.",
                 "footer-quote": "✦ \"Sé tú, conecta, comparte y brilla.\" ♡"
             },
             en: {
                 "nav-inicio": "Home", "nav-sobre": "About us", "nav-reglas": "Rules", "nav-unete": "Join",
-                "hero-t1": "Connect.", "hero-t2": "Share.", "hero-sub": "A place for teens aged 14 to 19 who want to meet new people, make friends, and create memories.",
-                "btn-unirse": "I WANT TO JOIN", "cta-sub": "Join our community",
+                "hero-t1": "Connect.", "hero-t2": "Share.", "hero-t3": "Be yourself",
+                "hero-sub": "A place for teens aged 14 to 19 who want to meet new people, make friends, and create memories.",
+                "btn-join": "I WANT TO JOIN", "cta-sub": "Join our community",
                 "sec-find": "What will you find here?",
-                "f1-title": "New Friendships", "f1-desc": "Meet amazing people just like you.",
-                "f2-title": "Conversations", "f2-desc": "Share ideas, tastes and much more.",
-                "f3-title": "Fun", "f3-desc": "Participate in dynamics, games and events.",
-                "f4-title": "Safe Environment", "f4-desc": "We respect everyone and care for our community.",
+                "f1-t": "New Friendships", "f1-d": "Meet amazing people just like you.",
+                "f2-t": "Conversations", "f2-d": "Share ideas, tastes and much more.",
+                "f3-t": "Fun", "f3-d": "Participate in dynamics, games and events.",
+                "f4-t": "Safe Environment", "f4-d": "We respect everyone and care for our community.",
                 "sec-rules": "Our Rules",
-                "r1-title": "Respect", "r1-desc": "Treat everyone with respect. No insults or discrimination allowed.",
-                "r2-title": "No Harassment", "r2-desc": "Harassing, annoying or threatening other members is not allowed.",
-                "r3-title": "Appropriate Content", "r3-desc": "No sexual, violent or inappropriate content allowed.",
-                "r4-title": "Age", "r4-desc": "This group is for youth aged 14 to 19.",
-                "r5-title": "Non-compliance", "r5-desc": "Breaking the rules may result in expulsion from the group.",
+                "r1-t": "Respect", "r1-d": "Treat everyone with respect. No insults or discrimination.",
+                "r2-t": "No Harassment", "r2-d": "Harassing, annoying or threatening others is not allowed.",
+                "r3-t": "Appropriate Content", "r3-d": "No sexual, violent or inappropriate content allowed.",
+                "r4-t": "Age", "r4-d": "This group is for youth aged 14 to 19.",
+                "r5-t": "Non-compliance", "r5-d": "Breaking the rules may result in expulsion from the group.",
                 "footer-quote": "✦ \"Be yourself, connect, share and shine.\" ♡"
             },
             pt: {
                 "nav-inicio": "Início", "nav-sobre": "Sobre nós", "nav-reglas": "Regras", "nav-unete": "Participe",
-                "hero-t1": "Conecte.", "hero-t2": "Compartilhe.", "hero-sub": "Um lugar para jovens de 14 a 19 anos que querem conhecer gente nova, fazer amigos e criar memórias.",
-                "btn-unirse": "QUERO PARTICIPAR", "cta-sub": "Junte-se à nossa comunidade",
+                "hero-t1": "Conecte.", "hero-t2": "Compartilhe.", "hero-t3": "Seja você",
+                "hero-sub": "Um lugar para jovens de 14 a 19 anos que querem conhecer gente nova, fazer amigos e criar memórias.",
+                "btn-join": "QUERO PARTICIPAR", "cta-sub": "Junte-se à nossa comunidade",
                 "sec-find": "O que você encontrará aqui?",
-                "f1-title": "Novas amizades", "f1-desc": "Conheça pessoas incríveis como você.",
-                "f2-title": "Conversas", "f2-desc": "Compartilhe ideias, gostos e muito mais.",
-                "f3-title": "Diversão", "f3-desc": "Participe de dinâmicas, jogos e eventos.",
-                "f4-title": "Ambiente seguro", "f4-desc": "Respeitamos a todos e cuidamos da nossa comunidade.",
+                "f1-t": "Novas amizades", "f1-d": "Conheça pessoas incríveis como você.",
+                "f2-t": "Conversas", "f2-d": "Compartilhe ideias, gostos e muito mais.",
+                "f3-t": "Diversão", "f3-d": "Participe de dinâmicas, jogos e eventos.",
+                "f4-t": "Ambiente seguro", "f4-d": "Respeitamos a todos e cuidamos da nossa comunidade.",
                 "sec-rules": "Nossas regras",
-                "r1-title": "Respeito", "r1-desc": "Trate todos com respeito. Insultos ou discriminação não são tolerados.",
-                "r2-title": "Sem assédio", "r2-desc": "Não é permitido assediar, incomodar ou ameaçar outros membros.",
-                "r3-title": "Conteúdo apropriado", "r3-desc": "Conteúdo sexual, violento ou inapropriado não é permitido.",
-                "r4-title": "Idade", "r4-desc": "Este grupo é para jovens de 14 a 19 anos.",
-                "r5-title": "Descumprimento", "r5-desc": "Quebrar as regras pode resultar na expulsão do grupo.",
+                "r1-t": "Respeito", "r1-d": "Trate todos com respeito. Insultos ou discriminação não são tolerados.",
+                "r2-t": "Sem assédio", "r2-d": "Não é permitido assediar, incomodar ou ameaçar outros membros.",
+                "r3-t": "Conteúdo apropriado", "r3-d": "Conteúdo sexual, violento ou inapropriado não é permitido.",
+                "r4-t": "Idade", "r4-d": "Este grupo é para jovens de 14 a 19 anos.",
+                "r5-t": "Descumprimento", "r5-d": "Quebrar as regras pode resultar na expulsão do grupo.",
                 "footer-quote": "✦ \"Seja você, conecte, compartilhe e brilhe.\" ♡"
             },
             fr: {
                 "nav-inicio": "Accueil", "nav-sobre": "À propos", "nav-reglas": "Règles", "nav-unete": "Rejoindre",
-                "hero-t1": "Connecte.", "hero-t2": "Partage.", "hero-sub": "Un endroit pour les jeunes de 14 à 19 ans qui veulent faire de nouvelles connaissances et créer des souvenirs.",
-                "btn-unirse": "JE VEUX REJOINDRE", "cta-sub": "Rejoignez notre communauté",
+                "hero-t1": "Connecte.", "hero-t2": "Partage.", "hero-t3": "Sois toi",
+                "hero-sub": "Un endroit pour les jeunes de 14 à 19 ans qui veulent faire de nouvelles connaissances et créer des souvenirs.",
+                "btn-join": "JE VEUX REJOINDRE", "cta-sub": "Rejoignez notre communauté",
                 "sec-find": "Que trouverez-vous ici ?",
-                "f1-title": "Nouvelles amitiés", "f1-desc": "Rencontrez des gens incroyables comme vous.",
-                "f2-title": "Conversations", "f2-desc": "Partagez des idées, des goûts et bien plus encore.",
-                "f3-title": "Divertissement", "f3-desc": "Participez à des dynamiques, des jeux et des événements.",
-                "f4-title": "Environnement sûr", "f4-desc": "Nous respectons tout le monde et prenons soin de notre communauté.",
+                "f1-t": "Nouvelles amitiés", "f1-d": "Rencontrez des gens incroyables comme vous.",
+                "f2-t": "Conversations", "f2-d": "Partagez des idées, des goûts et bien plus encore.",
+                "f3-t": "Divertissement", "f3-d": "Participez à des dynamiques, des jeux et des événements.",
+                "f4-t": "Environnement sûr", "f4-d": "Nous respectons tout le monde et prenons soin de notre communauté.",
                 "sec-rules": "Nos règles",
-                "r1-title": "Respect", "r1-desc": "Traitez tout le monde avec respect. Aucune insulte ni discrimination.",
-                "r2-title": "Pas de harcèlement", "r2-desc": "Il est interdit de harceler ou de menacer d'autres membres.",
-                "r3-title": "Contenu approprié", "r3-desc": "Aucun contenu sexuel, violent ou inapproprié n'est autorisé.",
-                "r4-title": "Âge", "r4-desc": "Ce groupe est réservé aux jeunes de 14 à 19 ans.",
-                "r5-title": "Infraction", "r5-desc": "Enfreindre les règles peut entraîner l'expulsion du groupe.",
+                "r1-t": "Respect", "r1-d": "Traitez tout le monde avec respect. Aucune insulte ni discrimination.",
+                "r2-t": "Pas de harcèlement", "r2-d": "Il est interdit de harceler ou de menacer d'autres membres.",
+                "r3-t": "Contenu approprié", "r3-d": "Aucun contenu sexuel, violent ou inapproprié n'est autorisé.",
+                "r4-t": "Âge", "r4-d": "Ce groupe est réservé aux jeunes de 14 à 19 ans.",
+                "r5-t": "Infraction", "r5-d": "Enfreindre les règles peut entraîner l'expulsion du groupe.",
                 "footer-quote": "✦ \"Sois toi-même, connecte, partage et brille.\" ♡"
             },
             de: {
                 "nav-inicio": "Startseite", "nav-sobre": "Über uns", "nav-reglas": "Regeln", "nav-unete": "Beitreten",
-                "hero-t1": "Verbinde.", "hero-t2": "Teile.", "hero-sub": "Ein Ort für Jugendliche von 14 bis 19 Jahren, die neue Leute kennenlernen und Erinnerungen schaffen möchten.",
-                "btn-unirse": "ICH MÖCHTE BEITRETEN", "cta-sub": "Werde Teil unserer Community",
+                "hero-t1": "Verbinde.", "hero-t2": "Teile.", "hero-t3": "Sei du selbst",
+                "hero-sub": "Ein Ort für Jugendliche von 14 bis 19 Jahren, die neue Leute kennenlernen und Erinnerungen schaffen möchten.",
+                "btn-join": "ICH MÖCHTE BEITRETEN", "cta-sub": "Werde Teil unserer Community",
                 "sec-find": "Was wirst du hier finden?",
-                "f1-title": "Neue Freundschaften", "f1-desc": "Lerne tolle Leute wie dich kennen.",
-                "f2-title": "Gespräche", "f2-desc": "Teile Ideen, Interessen und vieles mehr.",
-                "f3-title": "Spaß", "f3-desc": "Nimm an Aktivitäten, Spielen und Events teil.",
-                "f4-title": "Sichere Umgebung", "f4-desc": "Wir respektieren jeden und schützen unsere Gemeinschaft.",
+                "f1-t": "Neue Freundschaften", "f1-d": "Lerne tolle Leute wie dich kennen.",
+                "f2-t": "Gespräche", "f2-d": "Teile Ideen, Interessen und vieles mehr.",
+                "f3-t": "Spaß", "f3-d": "Nimm an Aktivitäten, Spielen und Events teil.",
+                "f4-t": "Sichere Umgebung", "f4-d": "Wir respektieren jeden und schützen unsere Gemeinschaft.",
                 "sec-rules": "Unsere Regeln",
-                "r1-title": "Respekt", "r1-desc": "Behandle alle mit Respekt. Keine Beleidigungen oder Diskriminierung.",
-                "r2-title": "Keine Belästigung", "r2-desc": "Das Belästigen oder Bedrohen von Mitgliedern ist untersagt.",
-                "r3-title": "Angemessener Inhalt", "r3-desc": "Keine sexuellen, gewalttätigen oder unpassenden Inhalte.",
-                "r4-title": "Alter", "r4-desc": "Diese Gruppe ist für Jugendliche von 14 bis 19 Jahren.",
-                "r5-title": "Regelverstoß", "r5-desc": "Das Brechen der Regeln kann zum Ausschluss führen.",
+                "r1-t": "Respekt", "r1-d": "Behandle alle mit Respekt. Keine Beleidigungen oder Diskriminierung.",
+                "r2-t": "Keine Belästigung", "r2-d": "Das Belästigen oder Bedrohen von Mitgliedern ist untersagt.",
+                "r3-t": "Angemessener Inhalt", "r3-d": "Keine sexuellen, gewalttätigen oder unpassenden Inhalte.",
+                "r4-t": "Alter", "r4-d": "Diese Gruppe ist für Jugendliche von 14 bis 19 Jahren.",
+                "r5-t": "Regelverstoß", "r5-d": "Das Brechen der Regeln kann zum Ausschluss führen.",
                 "footer-quote": "✦ \"Sei du selbst, verbinde dich, teile und strahle.\" ♡"
             },
             it: {
                 "nav-inicio": "Home", "nav-sobre": "Chi siamo", "nav-reglas": "Regole", "nav-unete": "Unisciti",
-                "hero-t1": "Connettiti.", "hero-t2": "Condividi.", "hero-sub": "Un luogo per giovani dai 14 ai 19 anni che vogliono conoscere nuove persone e creare ricordi.",
-                "btn-unirse": "VOGLIO UNIRMI", "cta-sub": "Unisciti alla nostra community",
+                "hero-t1": "Connettiti.", "hero-t2": "Condividi.", "hero-t3": "Sii te stesso",
+                "hero-sub": "Un luogo per giovani dai 14 ai 19 anni che vogliono conoscere nuove persone e creare ricordi.",
+                "btn-join": "VOGLIO UNIRMI", "cta-sub": "Unisciti alla nostra community",
                 "sec-find": "Cosa troverai qui?",
-                "f1-title": "Nuove amicizie", "f1-desc": "Incontra persone incredibili come te.",
-                "f2-title": "Conversazioni", "f2-desc": "Condividi idee, gusti e molto altro.",
-                "f3-title": "Divertimento", "f3-desc": "Partecipa a dinamiche, giochi ed eventi.",
-                "f4-title": "Ambiente sicuro", "f4-desc": "Rispettiamo tutti e proteggiamo la nostra community.",
+                "f1-t": "Nuove amicizie", "f1-d": "Incontra persone incredibili come te.",
+                "f2-t": "Conversazioni", "f2-d": "Condividi idee, gusti e molto altro.",
+                "f3-t": "Divertimento", "f3-d": "Partecipa a dinamiche, giochi ed eventi.",
+                "f4-t": "Ambiente sicuro", "f4-d": "Rispettiamo tutti e proteggiamo la nostra community.",
                 "sec-rules": "Le nostre regole",
-                "r1-title": "Rispetto", "r1-desc": "Tratta tutti con rispetto. Ness
-                    "r2-title": "No molestie", "r2-desc": "Non è permesso molestare o minacciare altri membri.",
-                "r3-title": "Contenuto appropriato", "r3-desc": "Non sono consentiti contenuti sessuali o inappropriati.",
-                "r4-title": "Età", "r4-desc": "Questo gruppo è per giovani dai 14 ai 19 anni.",
-                "r5-title": "Inadempienza", "r5-desc": "La violazione delle regole può comportare l'espulsione.",
+                "r1-t": "Rispetto", "r1-d": "Tratta tutti con rispetto. Nessun insulto o discriminazione.",
+                "r2-t": "No molestie", "r2-d": "Non è permesso molestare o minacciare altri membri.",
+                "r3-t": "Contenuto appropriato", "r3-d": "Non sono consentiti contenuti sessuali o inappropriati.",
+                "r4-t": "Età", "r4-d": "Questo gruppo è per giovani dai 14 ai 19 anni.",
+                "r5-t": "Inadempienza", "r5-d": "La violazione delle regole può comportare l'espulsione.",
                 "footer-quote": "✦ \"Sii te stesso, connettiti, condividi e brilla.\" ♡"
             },
             ja: {
                 "nav-inicio": "ホーム", "nav-sobre": "私たちについて", "nav-reglas": "ルール", "nav-unete": "参加する",
-                "hero-t1": "つながる。", "hero-t2": "共有する。", "hero-sub": "14歳から19歳までの若い世代が新しい友達を作り、思い出を作るための場所。",
-                "btn-unirse": "参加したい", "cta-sub": "コミュニティに参加しよう",
+                "hero-t1": "つながる。", "hero-t2": "共有する。", "hero-t3": "自分らしく",
+                "hero-sub": "14歳から19歳までの若い世代が新しい友達を作り、思い出を作るための場所。",
+                "btn-join": "参加したい", "cta-sub": "コミュニティに参加しよう",
                 "sec-find": "ここで見つかるもの",
-                "f1-title": "新しい友達", "f1-desc": "あなたのような素晴らしい人たちに出会おう。",
-                "f2-title": "会話", "f2-desc": "アイデアや趣味などを共有しよう。",
-                "f3-title": "楽しさ", "f3-desc": "ゲームやイベントに参加しよう。",
-                "f4-title": "安全な環境", "f4-desc": "全員を尊重し、コミュニティを守ります。",
+                "f1-t": "新しい友達", "f1-d": "あなたのような素晴らしい人たちに出会おう。",
+                "f2-t": "会話", "f2-d": "アイデアや趣味などを共有しよう。",
+                "f3-t": "楽しさ", "f3-d": "ゲームやイベントに参加しよう。",
+                "f4-t": "安全な環境", "f4-d": "全員を尊重し、コミュニティを守ります。",
                 "sec-rules": "私たちのルール",
-                "r1-title": "尊重", "r1-desc": "お互いを尊重しましょう。侮辱や差別は禁止です。",
-                "r2-title": "嫌がらせの禁止", "r2-desc": "他のメンバーへの嫌がらせや脅迫は禁止です。",
-                "r3-title": "適切なコンテンツ", "r3-desc": "性的、暴力的なコンテンツは禁止されています。",
-                "r4-title": "年齢", "r4-desc": "このグループは14歳から19歳までの方限定です。",
-                "r5-title": "規約違反", "r5-desc": "ルールに違反すると追放される場合があります。",
+                "r1-t": "尊重", "r1-d": "お互いを尊重しましょう。侮辱や差別は禁止です。",
+                "r2-t": "嫌がらせの禁止", "r2-d": "他のメンバーへの嫌がらせや脅迫は禁止です。",
+                "r3-t": "適切なコンテンツ", "r3-d": "性的、暴力的なコンテンツは禁止されています。",
+                "r4-t": "年齢", "r4-d": "このグループは14歳から19歳までの方限定です。",
+                "r5-t": "規約違反", "r5-d": "ルールに違反すると追放される場合があります。",
                 "footer-quote": "✦ 「あなたらしく、つながり、分かち合い、輝こう。」 ♡"
             },
             ko: {
                 "nav-inicio": "홈", "nav-sobre": "소개", "nav-reglas": "규칙", "nav-unete": "가입하기",
-                "hero-t1": "연결.", "hero-t2": "공유.", "hero-sub": "14세부터 19세까지의 청소년들이 새로운 친구를 사귀고 추억을 만드는 공간.",
-                "btn-unirse": "참여하기", "cta-sub": "커뮤니티에 가입하세요",
+                "hero-t1": "연결.", "hero-t2": "공유.", "hero-t3": "너답게",
+                "hero-sub": "14세부터 19세까지의 청소년들이 새로운 친구를 사귀고 추억을 만드는 공간.",
+                "btn-join": "참여하기", "cta-sub": "커뮤니티에 가입하세요",
                 "sec-find": "여기서 무엇을 찾을 수 있나요?",
-                "f1-title": "새로운 우정", "f1-desc": "멋진 사람들과 만나보세요.",
-                "f2-title": "대화", "f2-desc": "아이디어와 취향을 공유하세요.",
-                "f3-title": "재미", "f3-desc": "다양한 이벤트와 게임에 참여하세요.",
-                "f4-title": "안전한 환경", "f4-desc": "모두를 존중하고 커뮤니티를 보호합니다.",
+                "f1-t": "새로운 우정", "f1-d": "멋진 사람들과 만나보세요.",
+                "f2-t": "대화", "f2-d": "아이디어와 취향을 공유하세요.",
+                "f3-t": "재미", "f3-d": "다양한 이벤트와 게임에 참여하세요.",
+                "f4-t": "안전한 환경", "f4-d": "모두를 존중하고 커뮤니티를 보호합니다.",
                 "sec-rules": "우리의 규칙",
-                "r1-title": "존중", "r1-desc": "모두를 존중하세요. 모욕이나 차별은 금지됩니다.",
-                "r2-title": "괴롭힘 금지", "r2-desc": "다른 멤버를 괴롭히거나 위협할 수 없습니다.",
-                "r3-title": "적절한 콘텐츠", "r3-desc": "성적이거나 폭력적인 콘텐츠는 금지됩니다.",
-                "r4-title": "연령", "r4-desc": "이 그룹은 14세부터 19세 청소년을 위한 것입니다.",
-                "r5-title": "규칙 위반", "r5-desc": "규칙을 위반하면 추방될 수 있습니다.",
+                "r1-t": "존중", "r1-d": "모두를 존중하세요. 모욕이나 차별은 금지됩니다.",
+                "r2-t": "괴롭힘 금지", "r2-d": "다른 멤버를 괴롭히거나 위협할 수 없습니다.",
+                "r3-t": "적절한 콘텐츠", "r3-d": "성적이거나 폭력적인 콘텐츠는 금지됩니다.",
+                "r4-t": "연령", "r4-d": "이 그룹은 14세부터 19세 청소년을 위한 것입니다.",
+                "r5-t": "규칙 위반", "r5-d": "규칙을 위반하면 추방될 수 있습니다.",
                 "footer-quote": "✦ \"너답게, 연결하고, 공유하며 빛나라.\" ♡"
             },
             zh: {
                 "nav-inicio": "首页", "nav-sobre": "关于我们", "nav-reglas": "规则", "nav-unete": "加入",
-                "hero-t1": "连接。", "hero-t2": "分享。", "hero-sub": "专为14至19岁青少年打造的交友与创造美好回忆的专属空间。",
-                "btn-unirse": "我想加入", "cta-sub": "加入我们的社区",
+                "hero-t1": "连接。", "hero-t2": "分享。", "hero-t3": "做你自己",
+                "hero-sub": "专为14至19岁青少年打造的交友与创造美好回忆的专属空间。",
+                "btn-join": "我想加入", "cta-sub": "加入我们的社区",
                 "sec-find": "在这里你能找到什么？",
-                "f1-title": "新友谊", "f1-desc": "结识像你一样优秀的朋友。",
-                "f2-title": "精彩对话", "f2-desc": "分享想法、爱好以及更多内容。",
-                "f3-title": "无限乐趣", f3Desc: "参与各类互动、游戏与活动。",
-                "f4-title": "安全环境", "f4-desc": "我们尊重所有人并守护我们的社区。",
+                "f1-t": "新友谊", "f1-d": "结识像你一样优秀的朋友。",
+                "f2-t": "精彩对话", "f2-d": "分享想法、爱好以及更多内容。",
+                "f3-t": "无限乐趣", "f3-d": "参与各类互动、游戏与活动。",
+                "f4-t": "安全环境", "f4-d": "我们尊重所有人并守护我们的社区。",
                 "sec-rules": "我们的规则",
-                "r1-title": "互相尊重", "r1-desc": "以礼相待。绝不容忍任何侮辱或歧视。",
-                "r2-title": "禁止霸凌", "r2-desc": "不允许骚扰、恶意嘲讽或威胁其他成员。",
-                "r3-title": "适宜内容", "r3-desc": "严禁发布任何色情、暴力或不当内容。",
-                "r4-title": "年龄限制", "r4-desc": "本群组专为14至19岁青少年开放。",
-                "r5-title": "违规处理", "r5-desc": "破坏规则可能会导致被移出群组。",
+                "r1-t": "互相尊重", "r1-d": "以礼相待。绝不容忍任何侮辱或歧视。",
+                "r2-t": "禁止霸凌", "r2-d": "不允许骚扰、恶意嘲讽或威胁其他成员。",
+                "r3-t": "适宜内容", "r3-d": "严禁发布任何色情、暴力或不当内容。",
+                "r4-t": "年龄限制", "r4-d": "本群组专为14至19岁青少年开放。",
+                "r5-t": "违规处理", "r5-d": "破坏规则可能会导致被移出群组。",
                 "footer-quote": "✦ “做你自己，去连接、分享与闪耀。” ♡"
             },
             ru: {
                 "nav-inicio": "Главная", "nav-sobre": "О нас", "nav-reglas": "Правила", "nav-unete": "Вступить",
-                "hero-t1": "Общайся.", "hero-t2": "Делись.", "hero-sub": "Место для подростков от 14 до 19 лет, которые хотят найти новых друзей и создать воспоминания.",
-                "btn-unirse": "ХОЧУ ВСТУПИТЬ", "cta-sub": "Присоединяйся к нашему сообществу",
+                "hero-t1": "Общайся.", "hero-t2": "Делись.", "hero-t3": "Будь собой",
+                "hero-sub": "Место для подростков от 14 до 19 лет, которые хотят найти новых друзей и создать воспоминания.",
+                "btn-join": "ХОЧУ ВСТУПИТЬ", "cta-sub": "Присоединяйся к нашему сообществу",
                 "sec-find": "Что ты здесь найдешь?",
-                "f1-title": "Новые знакомства", "f1-desc": "Встречай потрясающих людей, таких же как ты.",
-                "f2-title": "Общение", "f2-desc": "Делись идеями, интересами и многим другим.",
-                "f3-title": "Развлечения", "f3-desc": "Участвуй в играх, событиях и мероприятиях.",
-                "f4-title": "Безопасная среда", "f4-desc": "Мы уважаем каждого и заботимся о сообществе.",
+                "f1-t": "Новые знакомства", "f1-d": "Встречай потрясающих людей, таких же как ты.",
+                "f2-t": "Общение", "f2-d": "Делись идеями, интересами и многим другим.",
+                "f3-t": "Развлечения", "f3-d": "Участвуй в играх, событиях и мероприятиях.",
+                "f4-t": "Безопасная среда", "f4-d": "Мы уважаем каждого и заботимся о сообществе.",
                 "sec-rules": "Наши правила",
-                "r1-title": "Уважение", "r1-desc": "Относись к другим с уважением. Оскорбления недопустимы.",
-                "r2-title": "Без буллинга", "r2-desc": "Запрещено донимать или угрожать участникам.",
-                "r3-title": "Цензура", "r3-desc": "Запрещен неприемлемый, контент 18+ и насилие.",
-                "r4-title": "Возраст", "r4-desc": "Группа предназначена для молодежи от 14 до 19 лет.",
-                "r5-title": "Нарушения", "r5-desc": "Нарушение правил может привести к исключению.",
+                "r1-t": "Уважение", "r1-d": "Относись к другим с уважением. Оскорбления недопустимы.",
+                "r2-t": "Без буллинга", "r2-d": "Запрещено донимать или угрожать участникам.",
+                "r3-t": "Цензура", "r3-d": "Запрещен неприемлемый, контент 18+ и насилие.",
+                "r4-t": "Возраст", "r4-d": "Группа предназначена для молодежи от 14 до 19 лет.",
+                "r5-t": "Нарушения", "r5-d": "Нарушение правил может привести к исключению.",
                 "footer-quote": "✦ \"Будь собой, общайся, делись и сияй.\" ♡"
             },
             ar: {
                 "nav-inicio": "الرئيسية", "nav-sobre": "معلومات عنا", "nav-reglas": "القواعد", "nav-unete": "انضم",
-                "hero-t1": "تواصل.", "hero-t2": "شارك.", "hero-sub": "مكان للشباب من عمر 14 إلى 19 عاماً للتعرف على أشخاص جدد وتكوين ذكريات.",
-                "btn-unirse": "أريد الانضمام", "cta-sub": "انضم إلى مجتمعنا",
+                "hero-t1": "تواصل.", "hero-t2": "شارك.", "hero-t3": "كن أنت",
+                "hero-sub": "مكان للشباب من عمر 14 إلى 19 عاماً للتعرف على أشخاص جدد وتكوين ذكريات.",
+                "btn-join": "أريد الانضمام", "cta-sub": "انضم إلى مجتمعنا",
                 "sec-find": "ماذا ستجد هنا؟",
-                "f1-title": "صداقات جديدة", "f1-desc": "تعرف على أشخاص رائعين يشاركونك اهتماماتك.",
-                "f2-title": "محادثات", "f2-desc": "شارك الأفكار والاهتمامات والمزيد.",
-                "f3-title": "متعة", "f3-desc": "شارك في الأنشطة والألعاب والفعاليات.",
-                "f4-title": "بيئة آمنة", "f4-desc": "نحن نحترم الجميع ونعتني بمجتمعنا.",
+                "f1-t": "صداقات جديدة", "f1-d": "تعرف على أشخاص رائعين يشاركونك اهتماماتك.",
+                "f2-t": "محادثات", "f2-d": "شارك الأفكار والاهتمامات والمزيد.",
+                "f3-t": "متعة", "f3-d": "شارك في الأنشطة والألعاب والفعاليات.",
+                "f4-t": "بيئة آمنة", "f4-d": "نحن نحترم الجميع ونعتني بمجتمعنا.",
                 "sec-rules": "قواعدنا",
-                "r1-title": "الاحترام", "r1-desc": "عامل الجميع باحترام. لا توجد إهانات أو تمييز.",
-                "r2-title": "لا تنمر", "r2-desc": "يمنع مضايقة أو تهديد الأعضاء الآخرين.",
-                "r3-title": "محتوى مناسب", "r3-desc": "يمنع نشر محتوى جنسي أو عنيف أو غير لائق.",
-                "r4-title": "العمر", "r4-desc": "هذا المجموعة مخصصة لمن تتراوح أعمارهم بين 14 و 19 عاماً.",
-                "r5-title": "مخالفة القواعد", "r5-desc": "خرق القواعد قد يؤدي إلى الطرد من المجموعة.",
+                "r1-t": "الاحترام", "r1-d": "عامل الجميع باحترام. لا توجد إهانات أو تمييز.",
+                "r2-t": "لا تنمر", "r2-d": "يمنع مضايقة أو تهديد الأعضاء الآخرين.",
+                "r3-t": "محتوى مناسب", "r3-d": "يمنع نشر محتوى جنسي أو عنيف أو غير لائق.",
+                "r4-t": "العمر", "r4-d": "هذا المجموعة مخصصة لمن تتراوح أعمارهم بين 14 و 19 عاماً.",
+                "r5-t": "مخالفة القواعد", "r5-d": "خرق القواعد قد يؤدي إلى الطرد من المجموعة.",
                 "footer-quote": "✦ \"كن أنت، تواصل، شارك وتألق.\" ♡"
             },
             hi: {
                 "nav-inicio": "होम", "nav-sobre": "हमारे बारे में", "nav-reglas": "नियम", "nav-unete": "शामिल हों",
-                "hero-t1": "जुड़ें।", "hero-t2": "साझा करें।", "hero-sub": "14 से 19 वर्ष के युवाओं के लिए एक जगह जो नए दोस्त बनाना चाहते हैं।",
-                "btn-unirse": "मैं जुड़ना चाहता हूँ", "cta-sub": "हमारे समुदाय से जुड़ें",
+                "hero-t1": "जुड़ें।", "hero-t2": "साझा करें।", "hero-t3": "खुद बनो",
+                "hero-sub": "14 से 19 वर्ष के युवाओं के लिए एक जगह जो नए दोस्त बनाना चाहते हैं।",
+                "btn-join": "मैं जुड़ना चाहता हूँ", "cta-sub": "हमारे समुदाय से जुड़ें",
                 "sec-find": "आपको यहाँ क्या मिलेगा?",
-                "f1-title": "नई दोस्ती", "f1-desc": "अपने जैसे अद्भुत लोगों से मिलें।",
-                "f2-title": "बातचीत", "f2-desc": "विचार और रुचियां साझा करें।",
-                "f3-title": "मनोरंजन", "f3-desc": "गतिविधियों, खेलों और कार्यक्रमों में भाग लें।",
-                "f4-title": "सुरक्षित माहौल", "f4-desc": "हम सबका सम्मान करते हैं और समुदाय की देखभाल करते हैं।",
+                "f1-t": "नई दोस्ती", "f1-d": "अपने जैसे अद्भुत लोगों से मिलें।",
+                "f2-t": "बातचीत", "f2-d": "विचार और रुचियां साझा करें।",
+                "f3-t": "मनोरंजन", "f3-d": "गतिविधियों, खेलों और कार्यक्रमों में भाग लें।",
+                "f4-t": "सुरक्षित माहौल", "f4-d": "हम सबका सम्मान करते हैं और समुदाय की देखभाल करते हैं।",
                 "sec-rules": "हमारे नियम",
-                "r1-title": "सम्मान", "r1-desc": "सभी के साथ सम्मान से पेश आएं। अपमान वर्जित है।",
-                "r2-title": "उत्पीड़न नहीं", "r2-desc": "अन्य सदस्यों को परेशान करना या धमकाना मना है।",
-                "r3-title": "उचित सामग्री", "r3-desc": "हिंसक या यौन सामग्री साझा करने की अनुमति नहीं है।",
-                "r4-title": "आयु सीमा", "r4-desc": "यह समूह 14 से 19 वर्ष के युवाओं के लिए है।",
-                "r5-title": "नियमों का उल्लंघन", "r5-desc": "नियम तोड़ने पर निष्कासित किया जा सकता है।",
-                "footer-quote": "✦ \"خود بنو، جڑ جاؤ، شیئر کرو और چمک उठो।\" ♡"
+                "r1-t": "सम्मान", "r1-d": "सभी के साथ सम्मान से पेश आएं। अपमान वर्जित है।",
+                "r2-t": "उत्पीड़न नहीं", "r2-d": "अन्य सदस्यों को परेशान करना या धमकाना मना है।",
+                "r3-t": "उचित सामग्री", "r3-d": "हिंसक या यौन सामग्री साझा करने की अनुमति नहीं है।",
+                "r4-t": "आयु सीमा", "r4-d": "यह समूह 14 से 19 वर्ष के युवाओं के लिए है।",
+                "r5-t": "नियमों का उल्लंघन", "r5-d": "नियम तोड़ने पर निष्कासित किया जा सकता है।",
+                "footer-quote": "✦ \"खुद बनो, जुड़ जाओ, शेयर करो और चमक उठो।\" ♡"
             },
             nl: {
                 "nav-inicio": "Home", "nav-sobre": "Over ons", "nav-reglas": "Regels", "nav-unete": "Word lid",
-                "hero-t1": "Verbind.", "hero-t2": "Deel.", "hero-sub": "Een plek voor jongeren van 14 tot 19 jaar die nieuwe mensen willen ontmoeten.",
-                "btn-unirse": "IK WIL LID WORDEN", "cta-sub": "Sluit je aan bij onze community",
+                "hero-t1": "Verbind.", "hero-t2": "Deel.", "hero-t3": "Wees jezelf",
+                "hero-sub": "Een plek voor jongeren van 14 tot 19 jaar die nieuwe mensen willen ontmoeten.",
+                "btn-join": "IK WIL LID WORDEN", "cta-sub": "Sluit je aan bij onze community",
                 "sec-find": "Wat vind je hier?",
-                "f1-title": "Nieuwe vriendschappen", "f1-desc": "Ontmoet geweldige mensen zoals jij.",
-                "f2-title": "Gesprekken", "f2-desc": "Deel ideeën en nog veel meer.",
-                "f3-title": "Plezier", "f3-desc": "Doe mee aan evenementen en games.",
-                "f4-title": "Veilige omgeving", "f4-desc": "We respecteren iedereen en beschermen onze community.",
+                "f1-t": "Nieuwe vriendschappen", "f1-d": "Ontmoet geweldige mensen zoals jij.",
+                "f2-t": "Gesprekken", "f2-d": "Deel ideeën en nog veel meer.",
+                "f3-t": "Plezier", "f3-d": "Doe mee aan evenementen en games.",
+                "f4-t": "Veilige omgeving", "f4-d": "We respecteren iedereen en beschermen onze community.",
                 "sec-rules": "Onze regels",
-                "r1-title": "Respect", "r1-desc": "Behandel iedereen met respect. Geen beledigingen.",
-                "r2-title": "Geen pesten", "r2-desc": "Leden lastigval of bedreigen is niet toegestaan.",
-                "r3-title": "Gepaste inhoud", "r3-desc": "Geen seksuele of ongepaste inhoud toegestaan.",
-                "r4-title": "Leeftijd", "r4-desc": "Deze groep is voor jongeren van 14 tot 19 jaar.",
-                "r5-title": "Overtreding", "r5-desc": "Regels breken kan leiden tot uitzetting.",
+                "r1-t": "Respect", "r1-d": "Behandel iedereen met respect. Geen beledigingen.",
+                "r2-t": "Geen pesten", "r2-d": "Leden lastigval of bedreigen is niet toegestaan.",
+                "r3-t": "Gepaste inhoud", "r3-d": "Geen seksuele of ongepaste inhoud toegestaan.",
+                "r4-t": "Leeftijd", "r4-d": "Deze groep is voor jongeren van 14 tot 19 jaar.",
+                "r5-t": "Overtreding", "r5-d": "Regels breken kan leiden tot uitzetting.",
                 "footer-quote": "✦ \"Wees jezelf, verbind, deel en schitter.\" ♡"
             },
             pl: {
                 "nav-inicio": "Strona główna", "nav-sobre": "O nas", "nav-reglas": "Zasady", "nav-unete": "Dołącz",
-                "hero-t1": "Połącz się.", "hero-t2": "Dziel się.", "hero-sub": "Miejsce dla nastolatków w wieku 14-19 lat, którzy chcą poznać nowych ludzi.",
-                "btn-unirse": "CHCĘ DOŁĄCZYĆ", "cta-sub": "Dołącz do naszej społeczności",
+                "hero-t1": "Połącz się.", "hero-t2": "Dziel się.", "hero-t3": "Bądź sobą",
+                "hero-sub": "Miejsce dla nastolatków w wieku 14-19 lat, którzy chcą poznać nowych ludzi.",
+                "btn-join": "CHCĘ DOŁĄCZYĆ", "cta-sub": "Dołącz do naszej społeczności",
                 "sec-find": "Co tu znajdziesz?",
-                "f1-title": "Nowe przyjaźnie", "f1-desc": "Poznaj niesamowitych ludzi takich jak Ty.",
-                "f2-title": "Rozmowy", "f2-desc": "Dziel się pomysłami i wieloma innymi rzeczami.",
-                "f3-title": "Zabawa", "f3-desc": "Bierz udział w grach i wydarzeniach.",
-                "f4-title": "Bezpieczne środowisko", "f4-desc": "Szanujemy wszystkich i dbamy o społeczność.",
+                "f1-t": "Nowe przyjaźnie", "f1-d": "Poznaj niesamowitych ludzi takich jak Ty.",
+                "f2-t": "Rozmowy", "f2-d": "Dziel się pomysłami i wieloma innymi rzeczami.",
+                "f3-t": "Zabawa", "f3-d": "Bierz udział w grach i wydarzeniach.",
+                "f4-t": "Bezpieczne środowisko", "f4-d": "Szanujemy wszystkich i dbamy o społeczność.",
                 "sec-rules": "Nasze zasady",
-                "r1-title": "Szacunek", "r1-desc": "Traktuj każdego z szacunkiem. Zero dyskryminacji.",
-                "r2-title": "Zakaz nękania", "r2-desc": "Nękanie lub grożenie innym jest zabronione.",
-                "r3-title": "Odpowiednie treści", "r3-desc": "Brak zgody na treści erotyczne i przemoc.",
-                "r4-title": "Wiek", "r4-desc": "Grupa przeznaczona dla osób w wieku 14-19 lat.",
-                "r5-title": "Naruszenie zasad", "r5-desc": "Złamanie zasad może grozić usunięciem.",
+                "r1-t": "Szacunek", "r1-d": "Traktuj każdego z szacunkiem. Zero dyskryminacji.",
+                "r2-t": "Zakaz nękania", "r2-d": "Nękanie lub grożenie innym jest zabronione.",
+                "r3-t": "Odpowiednie treści", "r3-d": "Brak zgody na treści erotyczne i przemoc.",
+                "r4-t": "Wiek", "r4-d": "Grupa przeznaczona dla osób w wieku 14-19 lat.",
+                "r5-t": "Naruszenie zasad", "r5-d": "Złamanie zasad może grozić usunięciem.",
                 "footer-quote": "✦ \"Bądź sobą, łącz się, dziel i błyszcz.\" ♡"
             },
             tr: {
                 "nav-inicio": "Ana Sayfa", "nav-sobre": "Hakkımızda", "nav-reglas": "Kurallar", "nav-unete": "Katıl",
-                "hero-t1": "Bağlan.", "hero-t2": "Paylaş.", "hero-sub": "Yeni insanlarla tanışmak isteyen 14-19 yaş arası gençler için bir yer.",
-                "btn-unirse": "KATILMAK İSTİYORUM", "cta-sub": "Topluluğumuza katıl",
+                "hero-t1": "Bağlan.", "hero-t2": "Paylaş.", "hero-t3": "Kendin ol",
+                "hero-sub": "Yeni insanlarla tanışmak isteyen 14-19 yaş arası gençler için bir yer.",
+                "btn-join": "KATILMAK İSTİYORUM", "cta-sub": "Topluluğumuza katıl",
                 "sec-find": "Burada ne bulacaksın?",
-                "f1-title": "Yeni dostluklar", "f1-desc": "Senin gibi harika insanlarla tanış.",
-                "f2-title": "Sohbetler", "f2-desc": "Fikirlerini ve çok daha fazlasını paylaş.",
-                "f3-title": "Eğlence", "f3-desc": "Oyunlara ve etkinliklere katıl.",
-                "f4-title": "Güvenli ortam", "f4-desc": "Herkesi önemsiyor ve topluluğumuzu koruyoruz.",
+                "f1-t": "Yeni dostluklar", "f1-d": "Senin gibi harika insanlarla tanış.",
+                "f2-t": "Sohbetler", "f2-d": "Fikirlerini ve çok daha fazlasını paylaş.",
+                "f3-t": "Eğlence", "f3-d": "Oyunlara ve etkinliklere katıl.",
+                "f4-t": "Güvenli ortam", "f4-d": "Herkesi önemsiyor ve topluluğumuzu koruyoruz.",
                 "sec-rules": "Kurallarımız",
-                "r1-title": "Saygı", "r1-desc": "Herkese saygıyla yaklaş. Ayrımcılığa yer yok.",
-                "r2-title": "Tacize Hayır", "r2-desc": "Üyeleri rahatsız etmek veya tehdit etmek yasaktır.",
-                "r3-title": "Uygun İçerik", "r3-desc": "Cinsel veya uygunsuz içerik paylaşımı yasaktır.",
-                "r4-title": "Yaş", "r4-desc": "Bu grup 14-19 yaş arası gençler içindir.",
-                "r5-title": "Kural İhlali", "r5-desc": "Kuralları çiğnemek gruptan çıkarılmayla sonuçlanabilir.",
+                "r1-t": "Saygı", "r1-d": "Herkese saygıyla yaklaş. Ayrımcılığa yer yok.",
+                "r2-t": "Tacize Hayır", "r2-d": "Üyeleri rahatsız etmek veya tehdit etmek yasaktır.",
+                "r3-t": "Uygun İçerik", "r3-d": "Cinsel veya uygunsuz içerik paylaşımı yasaktır.",
+                "r4-t": "Yaş", "r4-d": "Bu grup 14-19 yaş arası gençler içindir.",
+                "r5-t": "Kural İhlali", "r5-d": "Kuralları çiğnemek gruptan çıkarılmayla sonuçlanabilir.",
                 "footer-quote": "✦ \"Kendin ol, bağlan, paylaş ve parla.\" ♡"
             },
             vi: {
                 "nav-inicio": "Trang chủ", "nav-sobre": "Về chúng tôi", "nav-reglas": "Quy tắc", "nav-unete": "Tham gia",
-                "hero-t1": "Kết nối.", "hero-t2": "Chia sẻ.", "hero-sub": "Nơi dành cho các bạn trẻ từ 14 đến 19 tuổi muốn kết bạn mới.",
-                "btn-unirse": "TÔI MUỐN THAM GIA", "cta-sub": "Tham gia cộng đồng của chúng tôi",
+                "hero-t1": "Kết nối.", "hero-t2": "Chia sẻ.", "hero-t3": "Là chính mình",
+                "hero-sub": "Nơi dành cho các bạn trẻ từ 14 đến 19 tuổi muốn kết bạn mới.",
+                "btn-join": "TÔI MUỐN THAM GIA", "cta-sub": "Tham gia cộng đồng của chúng tôi",
                 "sec-find": "Bạn sẽ tìm thấy gì ở đây?",
-                "f1-title": "Tình bạn mới", "f1-desc": "Gặp gỡ những người bạn tuyệt vời.",
-                "f2-title": "Trò chuyện", "f2-desc": "Chia sẻ ý tưởng và nhiều hơn nữa.",
-                "f3-title": "Giải trí", "f3-desc": "Tham gia các trò chơi và sự kiện.",
-                "f4-title": "Môi trường an toàn", "f4-desc": "Chúng tôi tôn trọng tất cả và bảo vệ cộng đồng.",
+                "f1-t": "Tình bạn mới", "f1-d": "Gặp gỡ những người bạn tuyệt vời.",
+                "f2-t": "Trò chuyện", "f2-d": "Chia sẻ ý tưởng và nhiều hơn nữa.",
+                "f3-t": "Giải trí", "f3-d": "Tham gia các trò chơi và sự kiện.",
+                "f4-t": "Môi trường an toàn", "f4-d": "Chúng tôi tôn trọng tất cả và bảo vệ cộng đồng.",
                 "sec-rules": "Quy tắc của chúng tôi",
-                "r1-title": "Tôn trọng", "r1-desc": "Đối xử với mọi người bằng sự tôn trọng.",
-                "r2-title": "Không quấy rối", "r2-desc": "Không quấy rối hoặc đe dọa thành viên khác.",
-                "r3-title": "Nội dung phù hợp", "r3-desc": "Không chấp nhận nội dung bạo lực hoặc đồi trụy.",
-                "r4-title": "Độ tuổi", "r4-desc": "Nhóm này dành cho lứa tuổi từ 14 đến 19.",
-                "r5-title": "Vi phạm", "r5-desc": "Vi phạm quy tắc có thể dẫn đến việc bị trục xuất.",
+                "r1-t": "Tôn trọng", "r1-d": "Đối xử với mọi người bằng sự tôn trọng.",
+                "r2-t": "Không quấy rối", "r2-d": "Không quấy rối hoặc đe dọa thành viên khác.",
+                "r3-t": "Nội dung phù hợp", "r3-d": "Không chấp nhận nội dung bạo lực hoặc đồi trụy.",
+                "r4-t": "Độ tuổi", "r4-d": "Nhóm này dành cho lứa tuổi từ 14 đến 19.",
+                "r5-t": "Vi phạm", "r5-d": "Vi phạm quy tắc có thể dẫn đến việc bị trục xuất.",
                 "footer-quote": "✦ \"Là chính mình, kết nối, chia sẻ và tỏa sáng.\" ♡"
             },
             id: {
                 "nav-inicio": "Beranda", "nav-sobre": "Tentang", "nav-reglas": "Aturan", "nav-unete": "Gabung",
-                "hero-t1": "Terhubung.", "hero-t2": "Berbagi.", "hero-sub": "Tempat bagi remaja usia 14 hingga 19 tahun yang ingin kenal orang baru.",
-                "btn-unirse": "SAYA INGIN BERGABUNG", "cta-sub": "Bergabunglah dengan komunitas kami",
+                "hero-t1": "Terhubung.", "hero-t2": "Berbagi.", "hero-t3": "Jadilah dirimu",
+                "hero-sub": "Tempat bagi remaja usia 14 hingga 19 tahun yang ingin kenal orang baru.",
+                "btn-join": "SAYA INGIN BERGABUNG", "cta-sub": "Bergabunglah dengan komunitas kami",
                 "sec-find": "Apa yang kamu temukan di sini?",
-                "f1-title": "Pertemanan baru", "f1-desc": "Temui orang-orang hebat seperti kamu.",
-                "f2-title": "Obrolan", "f2-desc": "Bagikan ide dan banyak lagi.",
-                "f3-title": "Hiburan", "f3-desc": "Ikuti game dan acara menarik.",
-                "f4-title": "Lingkungan aman", "f4-desc": "Kami menghormati semua dan menjaga komunitas.",
+                "f1-t": "Pertemanan baru", "f1-d": "Temui orang-orang hebat seperti kamu.",
+                "f2-t": "Obrolan", "f2-d": "Bagikan ide dan banyak lagi.",
+                "f3-t": "Hiburan", "f3-d": "Ikuti game dan acara menarik.",
+                "f4-t": "Lingkungan aman", "f4-d": "Kami menghormati semua dan menjaga komunitas.",
                 "sec-rules": "Aturan Kami",
-                "r1-title": "Respek", "r1-desc": "Perlakukan semua dengan hormat. Tanpa diskriminasi.",
-                "r2-title": "Tanpa Perundungan", "r2-desc": "Dilarang mengganggu atau mengancam anggota lain.",
-                "r3-title": "Konten Layak", "r3-desc": "Dilarang keras membagikan konten tidak senonoh.",
-                "r4-title": "Usia", "r4-desc": "Grup ini khusus untuk usia 14 hingga 19 tahun.",
-                "r5-title": "Pelanggaran", "r5-desc": "Melanggar aturan bisa berakibat dikeluarkan.",
+                "r1-t": "Respek", "r1-d": "Perlakukan semua dengan hormat. Tanpa diskriminasi.",
+                "r2-t": "Tanpa Perundungan", "r2-d": "Dilarang mengganggu atau mengancam anggota lain.",
+                "r3-t": "Konten Layak", "r3-d": "Dilarang keras membagikan konten tidak senonoh.",
+                "r4-t": "Usia", "r4-d": "Grup ini khusus untuk usia 14 hingga 19 tahun.",
+                "r5-t": "Pelanggaran", "r5-d": "Melanggar aturan bisa berakibat dikeluarkan.",
                 "footer-quote": "✦ \"Jadilah dirimu sendiri, terhubung, berbagi, dan bersinar.\" ♡"
             },
             uk: {
                 "nav-inicio": "Головна", "nav-sobre": "Про нас", "nav-reglas": "Правила", "nav-unete": "Приєднатися",
-                "hero-t1": "Зв'язуйся.", "hero-t2": "Ділися.", "hero-sub": "Місце для підлітків від 14 до 19 років, які хочуть знаходити нових друзів.",
-                "btn-unirse": "ХОЧУ ПРИЄДНАТИСЬ", "cta-sub": "Приєднуйся до нашої спільноти",
+                "hero-t1": "Зв'язуйся.", "hero-t2": "Ділися.", "hero-t3": "Будь собою",
+                "hero-sub": "Місце для підлітків від 14 до 19 років, які хочуть знаходити нових друзів.",
+                "btn-join": "ХОЧУ ПРИЄДНАТИСЬ", "cta-sub": "Приєднуйся до нашої спільноти",
                 "sec-find": "Що ти тут знайдеш?",
-                "f1-title": "Нові друзі", "f1-desc": "Зустрічай чудових людей, схожих на тебе.",
-                "f2-title": "Спілкування", "f2-desc": "Ділися ідеями та багато іншого.",
-                "f3-title": "Розваги", "f3-desc": "Брати участь у подіях та іграх.",
-                "f4-title": "Безпечне середовище", "f4-desc": "Ми поважаємо кожного та дбаємо про спільноту.",
+                "f1-t": "Нові друзі", "f1-d": "Зустрічай чудових людей, схожих на тебе.",
+                "f2-t": "Спілкування", "f2-d": "Ділися ідеями та багато іншого.",
+                "f3-t": "Розваги", "f3-d": "Брати участь у подіях та іграх.",
+                "f4-t": "Безпечне середовище", "f4-d": "Ми поважаємо кожного та дбаємо про спільноту.",
                 "sec-rules": "Наші правила",
-                "r1-title": "Повага", "r1-desc": "Ставтеся до інших з повагою. Без дискримінації.",
-                "r2-title": "Без булінгу", "r2-desc": "Заборонено погрожувати або докучати учасникам.",
-                "r3-title": "Цензура", "r3-desc": "Заборонено неприйнятний контент.",
-                "r4-title": "Вік", "r4-desc": "Група призначена для молоді від 14 до 19 років.",
-                "r5-title": "Порушення", "r5-desc": "Порушення правил може призвести до виключення.",
+                "r1-t": "Повага", "r1-d": "Ставтеся до інших з повагою. Без дискримінації.",
+                "r2-t": "Без булінгу", "r2-d": "Заборонено погрожувати або докучати учасникам.",
+                "r3-t": "Цензура", "r3-d": "Заборонено неприйнятний контент.",
+                "r4-t": "Вік", "r4-d": "Група призначена для молоді від 14 до 19 років.",
+                "r5-t": "Порушення", "r5-d": "Порушення правил може призвести до виключення.",
                 "footer-quote": "✦ \"Будь собою, спілкуйся, ділися та сяй.\" ♡"
             },
             sv: {
                 "nav-inicio": "Hem", "nav-sobre": "Om oss", "nav-reglas": "Regler", "nav-unete": "Gå med",
-                "hero-t1": "Anslut.", "hero-t2": "Dela.", "hero-sub": "En plats för ungdomar mellan 14 och 19 år som vill träffa nya vänner.",
-                "btn-unirse": "JAG VILL GÅ MED", "cta-sub": "Gå med i vår gemenskap",
+                "hero-t1": "Anslut.", "hero-t2": "Dela.", "hero-t3": "Var dig själv",
+                "hero-sub": "En plats för ungdomar mellan 14 och 19 år som vill träffa nya vänner.",
+                "btn-join": "JAG VILL GÅ MED", "cta-sub": "Gå med i vår gemenskap",
                 "sec-find": "Vad hittar du här?",
-                "f1-title": "Nya vänskaper", "f1-desc": "Träffa fantastiska människor precis som du.",
-                "f2-title": "Konversationer", "f2-desc": "Dela idéer och mycket mer.",
-                "f3-title": "Underhållning", "f3-desc": "Delta i spel och roliga aktiviteter.",
-                "f4-title": "Säker miljö", "f4-desc": "Vi respekterar alla och värnar om gemenskapen.",
+                "f1-t": "Nya vänskaper", "f1-d": "Träffa fantastiska människor precis som du.",
+                "f2-t": "Konversationer", "f2-d": "Dela idéer och mycket mer.",
+                "f3-t": "Underhållning", "f3-d": "Delta i spel och roliga aktiviteter.",
+                "f4-t": "Säker miljö", "f4-d": "Vi respekterar alla och värnar om gemenskapen.",
                 "sec-rules": "Våra regler",
-                "r1-title": "Respekt", "r1-desc": "Behandla alla med respekt. Inga förolämpningar.",
-                "r2-title": "Inga trakasserier", "r2-desc": "Trakasserier eller hot mot andra är förbjudet.",
-                "r3-title": "Lämpligt innehåll", "r3-desc": "Inget olämpligt eller sexuellt material tillåtet.",
-                "r4-title": "Ålder", "r4-desc": "Denna grupp är för ungdomar i åldern 14 till 19 år.",
-                "r5-title": "Överträdelse", "r5-desc": "Att bryta mot reglerna kan leda till uteslutning.",
+                "r1-t": "Respekt", "r1-d": "Behandla alla med respekt. Inga förolämpningar.",
+                "r2-t": "Inga trakasserier", "r2-d": "Trakasserier eller hot mot andra är förbjudet.",
+                "r3-t": "Lämpligt innehåll", "r3-d": "Inget olämpligt eller sexuellt material tillåtet.",
+                "r4-t": "Ålder", "r4-d": "Denna grupp är för ungdomar i åldern 14 till 19 år.",
+                "r5-t": "Överträdelse", "r5-d": "Att bryta mot reglerna kan leda till uteslutning.",
                 "footer-quote": "✦ \"Var dig själv, anslut, dela och gläns.\" ♡"
             },
             el: {
                 "nav-inicio": "Αρχική", "nav-sobre": "Σχετικά", "nav-reglas": "Κανόνες", "nav-unete": "Γίνε μέλος",
-                "hero-t1": "Συνδέσου.", "hero-t2": "Μοιράσου.", "hero-sub": "Ένα μέρος για νέους 14 έως 19 ετών που θέλουν να γνωρίσουν κόσμο.",
-                "btn-unirse": "ΘΕΛΩ ΝΑ ΣΥΜΜΕΤΕΧΩ", "cta-sub": "Γίνε μέλος της κοινότητάς μας",
+                "hero-t1": "Συνδέσου.", "hero-t2": "Μοιράσου.", "hero-t3": "Γίνε ο εαυτός σου",
+                "hero-sub": "Ένα μέρος για νέους 14 έως 19 ετών που θέλουν να γνωρίσουν κόσμο.",
+                "btn-join": "ΘΕΛΩ ΝΑ ΣΥΜΜΕΤΕΧΩ", "cta-sub": "Γίνε μέλος της κοινότητάς μας",
                 "sec-find": "Τι θα βρεις εδώ;",
-                "f1-title": "Νέες φιλίες", "f1-desc": "Γνώρισε καταπληκτικά άτομα σαν εσένα.",
-                "f2-title": "Συζητήσεις", "f2-desc": "Μοιράσου ιδέες και πολλά άλλα.",
-                "f3-title": "Διασκεδάστε", "f3-desc": "Συμμετέχετε σε παιχνίδια και εκδηλώσεις.",
-                "f4-title": "Ασφαλές περιβάλλον", "f4-desc": "Σεβόμαστε τους πάντες και προστατεύουμε την κοινότητα.",
+                "f1-t": "Νέες φιλίες", "f1-d": "Γνώρισε καταπληκτικά άτομα σαν εσένα.",
+                "f2-t": "Συζητήσεις", "f2-d": "Μοιράσου ιδέες και πολλά άλλα.",
+                "f3-t": "Διασκεδάστε", "f3-d": "Συμμετέχετε σε παιχνίδια και εκδηλώσεις.",
+                "f4-t": "Ασφαλές περιβάλλον", "f4-d": "Σεβόμαστε τους πάντες και προστατεύουμε την κοινότητα.",
                 "sec-rules": "Οι κανόνες μας",
-                "r1-title": "Σεβασμός", "r1-desc": "Φέρσου σε όλους με σεβασμό. Χωρίς διακριτικές συμπεριφορές.",
-                "r2-title": "Όχι παρενόχληση", "r2-desc": "Απαγορεύεται η ενόχληση ή η απειλή άλλων μελών.",
-                "r3-title": "Κατάλληλο περιεχόμενο", "r3-desc": "Δεν επιτρέπεται ακατάλληλο υλικό.",
-                "r4-title": "Ηλικία", "r4-desc": "Αυτή η ομάδα είναι για νέους 14 έως 19 ετών.",
-                "r5-title": "Παράβαση", "r5-desc": "Η παραβίαση των κανόνων μπορεί να οδηγήσει σε αποπομπή.",
+                "r1-t": "Σεβασμός", "r1-d": "Φέρσου σε όλους με σεβασμό. Χωρίς διακριτικές συμπεριφορές.",
+                "r2-t": "Όχι παρενόχληση", "r2-d": "Απαγορεύεται η ενόχληση ή η απειλή άλλων μελών.",
+                "r3-t": "Κατάλληλο περιεχόμενο", "r3-d": "Δεν επιτρέπεται ακατάλληλο υλικό.",
+                "r4-t": "Ηλικία", "r4-d": "Αυτή η ομάδα είναι για νέους 14 έως 19 ετών.",
+                "r5-t": "Παράβαση", "r5-d": "Η παραβίαση των κανόνων μπορεί να οδηγήσει σε αποπομπή.",
                 "footer-quote": "✦ \"Να είσαι ο εαυτός σου, συνδέσου, μοιράσου και λάμψε.\" ♡"
             }
         };
 
-        function initTranslator() {
-            const select = document.getElementById('language-select');
+        function initTranslationSystem() {
+            const select = document.getElementById('lang-select');
             select.addEventListener('change', (e) => {
-                const lang = e.target.value;
-                const t = dict[lang] || dict['es'];
-                
-                document.querySelectorAll('[data-translate]').forEach(el => {
-                    const key = el.getAttribute('data-translate');
-                    if (t[key]) {
-                        el.innerHTML = t[key];
+                const selectedLang = e.target.value;
+                const dict = translations[selectedLang] || translations['es'];
+
+                document.querySelectorAll('[data-key]').forEach(elem => {
+                    const key = elem.getAttribute('data-key');
+                    if (dict[key]) {
+                        elem.textContent = dict[key];
                     }
                 });
             });

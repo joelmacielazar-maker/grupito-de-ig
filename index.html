@@ -548,7 +548,7 @@
                 "r2-t": "لا تنمر", "r2-d": "يمنع مضايقة أو تهديد الأعضاء الآخرين.",
                 "r3-t": "محتوى مناسب", "r3-d": "يمنع نشر محتوى جنسي أو عنيف أو غير لائق.",
                 "r4-t": "العمر", "r4-d": "هذا المجموعة مخصصة لمن تتراوح أعمارهم بين 14 و 19 عاماً.",
-                "r5-t": "مخالفة القواعد", "r5-d": "خرق القواعد قد يؤدي إلى الطرد من المجموعة.",
+                "r5-t": "مخالفة القواعد", "r5-d": "خرق القواعد قد تؤدي إلى الطرد من المجموعة.",
                 "footer-quote": "✦ \"كن أنت، تواصل، شارك وتألق.\" ♡"
             },
             hi: {
@@ -724,6 +724,11 @@
                 document.querySelectorAll('[data-key]').forEach(elem => {
                     const key = elem.getAttribute('data-key');
                     if (dict[key]) {
+                        if (key === 'hero-t3' && (selectedLang === 'es' || selectedLang === 'en')) {
+                            elem.style.fontStyle = 'italic';
+                        } else if (key === 'hero-t3') {
+                            elem.style.fontStyle = 'normal';
+                        }
                         elem.textContent = dict[key];
                     }
                 });

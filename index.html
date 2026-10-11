@@ -1,887 +1,528 @@
 <!DOCTYPE html>
-
 <html lang="es" class="scroll-smooth">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Nuestro Grupo // Atardecer Estrellado</title>
 
-
-
     <script src="https://cdn.tailwindcss.com"></script>
-
     
-
     <!-- Google Fonts: Cinzel, Inter, Pinyon Script, VT323 (for VHS HUD) -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Pinyon+Script&family=VT323&display=swap" rel="stylesheet">
-
     
-
     <!-- Lucide Icons -->
-
     <script src="https://unpkg.com/lucide@latest"></script>
 
-
-
     <script>
-
         tailwind.config = {
-
             theme: {
-
                 extend: {
-
                     fontFamily: {
-
                         sans: ['Inter', 'sans-serif'],
-
                         serif: ['Cinzel', 'serif'],
-
                         cursive: ['Pinyon Script', 'cursive'],
-
                         vhs: ['VT323', 'monospace'],
-
                     }
-
                 }
-
             }
-
         }
-
     </script>
-
-
 
     <style>
-
         body {
-
             background-color: #0b0314;
-
             color: #f3f4f6;
-
             font-family: 'Inter', sans-serif;
-
             overflow-x: hidden;
-
             user-select: none;
-
         }
-
-
 
         /* Glassmorphism Cards */
-
         .glass-card {
-
             background: rgba(35, 12, 55, 0.45);
-
             backdrop-filter: blur(16px);
-
             -webkit-backdrop-filter: blur(16px);
-
-            border: 1px solid rgba(255, 255, 255, 0.1);
-
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
-
-            transition: all 0.35s ease;
-
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
-
-
 
         .glass-card:hover {
-
-            background: rgba(55, 18, 85, 0.6);
-
-            border-color: rgba(244, 114, 182, 0.35);
-
-            box-shadow: 0 12px 35px rgba(244, 114, 182, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.25);
-
-            transform: translateY(-4px);
-
+            background: rgba(55, 18, 85, 0.65);
+            border-color: rgba(244, 114, 182, 0.5);
+            box-shadow: 0 20px 45px rgba(244, 114, 182, 0.3), inset 0 1px 3px rgba(255, 255, 255, 0.35);
+            transform: translateY(-6px);
         }
-
-
 
         /* Cursive Typography Styling */
-
         .hero-cursive {
-
             font-family: 'Pinyon Script', cursive;
-
             background: linear-gradient(135deg, #ffd1ea 0%, #f472b6 50%, #e85d9e 100%);
-
             -webkit-background-clip: text;
-
             -webkit-text-fill-color: transparent;
-
-            filter: drop-shadow(0 0 20px rgba(232, 93, 158, 0.6));
-
+            filter: drop-shadow(0 0 25px rgba(232, 93, 158, 0.7));
         }
-
-
 
         /* Gradient CTA Button */
-
         .btn-gradient {
-
             background: linear-gradient(135deg, #f472b6 0%, #a855f7 50%, #6366f1 100%);
-
             box-shadow: 0 0 25px rgba(244, 114, 182, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
-
             transition: all 0.3s ease;
-
         }
-
-
 
         .btn-gradient:hover {
-
             transform: scale(1.04) translateY(-2px);
-
             box-shadow: 0 0 35px rgba(244, 114, 182, 0.8), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-
         }
-
-
 
         /* VHS / CRT Filter Overlay Effects */
-
         .vhs-overlay {
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             width: 100vw;
-
             height: 100vh;
-
             pointer-events: none;
-
             z-index: 40;
-
             background: linear-gradient(
-
                 rgba(18, 16, 16, 0) 50%, 
-
                 rgba(0, 0, 0, 0.25) 50%
-
             ), linear-gradient(
-
                 90deg,
-
                 rgba(255, 0, 0, 0.03),
-
                 rgba(0, 255, 0, 0.01),
-
                 rgba(0, 0, 255, 0.03)
-
             );
-
             background-size: 100% 3px, 6px 100%;
-
             box-shadow: inset 0 0 100px rgba(0,0,0,0.7);
-
         }
-
-
 
         /* VHS Tracking Line Glitch Animation */
-
         .vhs-tracking-line {
-
             position: fixed;
-
             top: 0;
-
             left: 0;
-
             width: 100%;
-
             height: 8px;
-
             background: rgba(255, 255, 255, 0.08);
-
             opacity: 0.6;
-
             pointer-events: none;
-
             z-index: 41;
-
             animation: vhsScan 8s linear infinite;
-
         }
-
-
 
         @keyframes vhsScan {
-
             0% { top: -10px; }
-
             100% { top: 105vh; }
-
         }
-
-
 
         /* Custom Scrollbar */
-
         ::-webkit-scrollbar { width: 8px; }
-
         ::-webkit-scrollbar-track { background: #0b0314; }
-
         ::-webkit-scrollbar-thumb { background: #3b1254; border-radius: 4px; }
-
         ::-webkit-scrollbar-thumb:hover { background: #f472b6; }
-
     </style>
-
 </head>
-
 <body class="relative min-h-screen text-slate-100 flex flex-col justify-between">
 
-
-
     <div class="fixed top-4 left-6 z-50 pointer-events-none font-vhs text-cyan-300 text-lg sm:text-xl tracking-widest flex items-center gap-3 drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]">
-
         <span class="inline-block w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
-
         <span>PLAY</span>
-
         <span id="vhs-timestamp" class="text-xs sm:text-sm text-pink-300 ml-2">00:00:00</span>
-
     </div>
-
-
 
     <!-- VHS Scanline and CRT Glitch Overlay -->
-
     <div class="vhs-overlay"></div>
-
     <div class="vhs-tracking-line"></div>
 
-
-
     <div class="relative w-full overflow-hidden">
-
         <canvas id="sunset-canvas" class="absolute top-0 left-0 w-full h-full pointer-events-none z-0"></canvas>
 
-
-
         <!-- Navigation Header -->
-
         <header class="relative z-30 max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-
             <div class="flex items-center gap-2 select-none">
-
                 <span class="text-pink-300 text-xl font-serif">✦</span>
-
                 <span class="font-cursive text-3xl md:text-4xl text-pink-200 tracking-wide">
-
                     Nuestro Grupo
-
                 </span>
-
             </div>
-
-
 
             <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-200">
-
                 <a href="#hero" class="border-b-2 border-pink-400 pb-0.5 text-white">Inicio</a>
-
                 <a href="#que-encontraras" class="hover:text-pink-300 transition-colors">Sobre nosotros</a>
-
                 <a href="#nuestras-reglas" class="hover:text-pink-300 transition-colors">Reglas</a>
-
                 <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" class="hover:text-pink-300 transition-colors">Únete</a>
-
             </nav>
 
+            <div class="flex items-center gap-4">
+                <!-- 20-Language Translator Widget -->
+                <select id="language-select" class="bg-[#1e0b36]/80 border border-pink-500/30 text-pink-200 text-xs rounded-full px-3 py-1.5 focus:outline-none focus:border-pink-400 cursor-pointer backdrop-blur-md shadow-inner">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇬🇧 English</option>
+                    <option value="pt">🇧🇷 Português</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="pl">🇵🇱 Polski</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                    <option value="vi">🇻🇳 Tiếng Việt</option>
+                    <option value="id">🇮🇩 Bahasa</option>
+                    <option value="uk">🇺🇦 Українська</option>
+                    <option value="sv">🇸🇪 Svenska</option>
+                    <option value="el">🇬🇷 Ελληνικά</option>
+                </select>
 
-
-            <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-pink-300 transition-colors p-2" title="Instagram">
-
-                <i data-lucide="instagram" class="w-5 h-5"></i>
-
-            </a>
-
+                <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="text-slate-200 hover:text-pink-300 transition-colors p-2" title="Instagram">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                </a>
+            </div>
         </header>
 
-
-
         <section id="hero" class="relative z-20 max-w-4xl mx-auto px-6 pt-16 pb-36 text-center flex flex-col items-center justify-center">
-
             
-
             <div class="space-y-2 mb-6">
-
                 <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-light text-white tracking-wide">
-
                     Conecta.<br>
-
                     Comparte.<br>
-
-                    <span class="hero-cursive text-6xl sm:text-8xl md:text-9xl block -mt-2">Sé tú. ♡</span>
-
+                    <span class="hero-cursive text-6xl sm:text-8xl md:text-9xl block -mt-2">Sé <span style="font-family: 'Pinyon Script', cursive; font-style: italic;">tú</span>. ♡</span>
                 </h1>
-
             </div>
-
-
 
             <p class="max-w-md mx-auto text-sm sm:text-base text-slate-200 font-light leading-relaxed mb-8">
-
                 Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.
-
             </p>
 
-
-
             <div class="flex flex-col items-center gap-3">
-
                 <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="btn-gradient text-white font-semibold text-sm px-8 py-3.5 rounded-full inline-flex items-center gap-2.5 shadow-lg uppercase tracking-wider">
-
                     <span>✦</span> QUIERO UNIRME
-
                 </a>
-
                 <span class="text-xs text-slate-300 font-light">Únete a nuestra comunidad</span>
-
             </div>
-
-
 
         </section>
-
     </div>
 
-
-
-    <section id="que-encontraras" class="relative z-20 py-16 px-6 bg-[#0a0214]/85 backdrop-blur-md">
-
-        <div class="max-w-5xl mx-auto text-center">
-
+    <!-- Esteticamente Mejorado: Sobre Nosotros -->
+    <section id="que-encontraras" class="relative z-20 py-24 px-6 bg-gradient-to-b from-[#0a0214]/85 via-[#130524]/90 to-[#070110] backdrop-blur-md">
+        <div class="max-w-6xl mx-auto text-center">
             
-
-            <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-12 inline-flex items-center gap-2">
-
-                ¿Qué encontrarás aquí? <span class="text-pink-400 text-xl">✦</span>
-
+            <div class="inline-block mb-3 px-4 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs tracking-widest uppercase">
+                Comunidad Exclusiva
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl text-white font-light mb-4 tracking-wide">
+                ¿Qué encontrarás aquí? <span class="text-pink-400 text-2xl">✦</span>
             </h2>
-
-
+            <p class="text-slate-400 text-sm max-w-xl mx-auto font-light mb-16">
+                Diseñado especialmente para ofrecerte un espacio único de conexión genuina, entretenimiento sano y crecimiento mutuo.
+            </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
                 
-
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="users" class="w-7 h-7"></i>
-
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute -top-12 -right-12 w-28 h-28 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-6 shadow-lg shadow-pink-500/5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="users" class="w-8 h-8"></i>
                     </div>
-
-                    <h3 class="font-medium text-base text-white">Nuevas amistades</h3>
-
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">
-
-                        Conoce personas increíbles como tú.
-
+                    <h3 class="font-serif text-lg text-white mb-3 tracking-wide">Nuevas amistades</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light">
+                        Conecta y entabla lazos profundos con personas increíbles que comparten tus mismos intereses y vibras.
                     </p>
-
                 </div>
 
-
-
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="message-square" class="w-7 h-7"></i>
-
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute -top-12 -right-12 w-28 h-28 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-indigo-600/20 border border-purple-400/30 flex items-center justify-center text-purple-300 mb-6 shadow-lg shadow-purple-500/5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="message-square" class="w-8 h-8"></i>
                     </div>
-
-                    <h3 class="font-medium text-base text-white">Conversaciones</h3>
-
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">
-
-                        Comparte ideas, gustos y mucho más.
-
+                    <h3 class="font-serif text-lg text-white mb-3 tracking-wide">Conversaciones</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light">
+                        Comparte ideas, gustos musicales, anécdotas y charlas memorables en un ambiente dinámico y receptivo.
                     </p>
-
                 </div>
 
-
-
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="star" class="w-7 h-7"></i>
-
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute -top-12 -right-12 w-28 h-28 bg-pink-500/10 rounded-full blur-2xl group-hover:bg-pink-500/20 transition-all"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-pink-500/20 to-purple-600/20 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-6 shadow-lg shadow-pink-500/5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="star" class="w-8 h-8"></i>
                     </div>
-
-                    <h3 class="font-medium text-base text-white">Diversión</h3>
-
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">
-
-                        Participa en dinámicas, juegos y eventos.
-
+                    <h3 class="font-serif text-lg text-white mb-3 tracking-wide">Diversión</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light">
+                        Participa activamente en dinámicas interactivas, eventos especiales y juegos diseñados para pasar momentos inolvidables.
                     </p>
-
                 </div>
 
-
-
-                <div class="flex flex-col items-center text-center space-y-3 p-4 rounded-2xl hover:bg-white/5 transition-colors">
-
-                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="shield-check" class="w-7 h-7"></i>
-
+                <div class="glass-card rounded-3xl p-8 flex flex-col items-center text-center relative overflow-hidden group">
+                    <div class="absolute -top-12 -right-12 w-28 h-28 bg-indigo-500/10 rounded-full blur-2xl group-hover:bg-indigo-500/20 transition-all"></div>
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500/20 to-pink-600/20 border border-indigo-400/30 flex items-center justify-center text-indigo-300 mb-6 shadow-lg shadow-indigo-500/5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield-check" class="w-8 h-8"></i>
                     </div>
-
-                    <h3 class="font-medium text-base text-white">Ambiente seguro</h3>
-
-                    <p class="text-xs text-slate-400 leading-relaxed font-light">
-
-                        Respetamos a todos y cuidamos nuestra comunidad.
-
+                    <h3 class="font-serif text-lg text-white mb-3 tracking-wide">Ambiente seguro</h3>
+                    <p class="text-xs text-slate-300 leading-relaxed font-light">
+                        Priorizamos el bienestar común con un riguroso cuidado comunitario y un respeto absoluto hacia todos los miembros.
                     </p>
-
                 </div>
-
-
 
             </div>
-
         </div>
-
     </section>
 
-
-
-    <section id="nuestras-reglas" class="relative z-20 py-20 px-6 bg-[#070110]">
-
+    <!-- Esteticamente Mejorado: Reglas -->
+    <section id="nuestras-reglas" class="relative z-20 py-24 px-6 bg-[#070110]">
         <div class="max-w-6xl mx-auto text-center">
-
             
-
-            <h2 class="font-serif text-2xl sm:text-3xl text-white font-light mb-14 inline-flex items-center gap-2">
-
-                <i data-lucide="scroll" class="w-6 h-6 text-pink-400"></i>
-
-                Nuestras reglas <span class="text-pink-400 text-xl">✦</span>
-
+            <div class="inline-block mb-3 px-4 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-300 text-xs tracking-widest uppercase">
+                Código de Convivencia
+            </div>
+            <h2 class="font-serif text-3xl sm:text-4xl text-white font-light mb-4 tracking-wide inline-flex items-center justify-center gap-3">
+                <i data-lucide="scroll" class="w-7 h-7 text-pink-400"></i>
+                Nuestras reglas <span class="text-pink-400 text-2xl">✦</span>
             </h2>
+            <p class="text-slate-400 text-sm max-w-xl mx-auto font-light mb-16">
+                Los pilares fundamentales que garantizan una convivencia sana, armoniosa y segura para cada integrante de la comunidad.
+            </p>
 
-
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
-
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
                 
-
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="heart" class="w-6 h-6"></i>
-
+                <div class="glass-card rounded-3xl p-7 flex flex-col items-center text-center relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-7 h-7"></i>
                     </div>
-
-                    <h3 class="font-medium text-sm text-white">Respeto</h3>
-
+                    <h3 class="font-serif text-base text-white mb-2">Respeto</h3>
                     <p class="text-xs text-slate-300 font-light leading-relaxed">
-
-                        Trata a todos con respeto. No se toleran insultos ni discriminación.
-
+                        Trata a todos con respeto mutuo. No se toleran insultos, faltas de consideración ni discriminación de ningún tipo.
                     </p>
-
                 </div>
 
-
-
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="ban" class="w-6 h-6"></i>
-
+                <div class="glass-card rounded-3xl p-7 flex flex-col items-center text-center relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="ban" class="w-7 h-7"></i>
                     </div>
-
-                    <h3 class="font-medium text-sm text-white">No acoso</h3>
-
+                    <h3 class="font-serif text-base text-white mb-2">No acoso</h3>
                     <p class="text-xs text-slate-300 font-light leading-relaxed">
-
-                        No está permitido acosar, molestar o amenazar a otros miembros.
-
+                        Cero tolerancia al acoso, hostigamiento, burlas malintencionadas o amenazas dirigidas a otros miembros.
                     </p>
-
                 </div>
 
-
-
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="shield" class="w-6 h-6"></i>
-
+                <div class="glass-card rounded-3xl p-7 flex flex-col items-center text-center relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shield" class="w-7 h-7"></i>
                     </div>
-
-                    <h3 class="font-medium text-sm text-white">Contenido apropiado</h3>
-
+                    <h3 class="font-serif text-base text-white mb-2">Contenido apropiado</h3>
                     <p class="text-xs text-slate-300 font-light leading-relaxed">
-
-                        No se permite contenido sexual, violento o inapropiado.
-
+                        Estrictamente prohibido compartir material explícito, sexual, violento o que atente contra la integridad visual y moral.
                     </p>
-
                 </div>
 
-
-
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="user" class="w-6 h-6"></i>
-
+                <div class="glass-card rounded-3xl p-7 flex flex-col items-center text-center relative group">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="user" class="w-7 h-7"></i>
                     </div>
-
-                    <h3 class="font-medium text-sm text-white">Edad</h3>
-
+                    <h3 class="font-serif text-base text-white mb-2">Edad</h3>
                     <p class="text-xs text-slate-300 font-light leading-relaxed">
-
-                        Este grupo es para jóvenes de 14 a 19 años.
-
+                        Comunidad dedicada exclusivamente para jóvenes en el rango de edad comprendido entre los 14 y 19 años.
                     </p>
-
                 </div>
 
-
-
-                <div class="glass-card rounded-2xl p-6 flex flex-col items-center text-center space-y-4">
-
-                    <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-400/20 flex items-center justify-center text-pink-300">
-
-                        <i data-lucide="alert-triangle" class="w-6 h-6"></i>
-
+                <div class="glass-card rounded-3xl p-7 flex flex-col items-center text-center relative group sm:col-span-2 md:col-span-1 lg:col-span-1">
+                    <div class="w-14 h-14 rounded-2xl bg-pink-500/10 border border-pink-400/30 flex items-center justify-center text-pink-300 mb-5 group-hover:scale-110 transition-transform">
+                        <i data-lucide="alert-triangle" class="w-7 h-7"></i>
                     </div>
-
-                    <h3 class="font-medium text-sm text-white">Incumplimiento</h3>
-
+                    <h3 class="font-serif text-base text-white mb-2">Incumplimiento</h3>
                     <p class="text-xs text-slate-300 font-light leading-relaxed">
-
-                        Romper las reglas puede resultar en la expulsión del grupo.
-
+                        Cualquier infracción o incumplimiento reiterado de las reglas conlleva la expulsión inmediata y definitiva del grupo.
                     </p>
-
                 </div>
-
-
 
             </div>
-
         </div>
-
     </section>
-
-
 
     <footer class="relative z-20 py-16 px-6 border-t border-white/5 bg-[#04000a] text-center space-y-6">
-
         <p class="font-cursive text-3xl sm:text-4xl text-pink-300">
-
             ✦ "Sé tú, conecta, comparte y brilla." ♡
-
         </p>
-
-
 
         <div class="flex items-center justify-center gap-6">
-
             <a href="https://ig.me/j/AbbUa9YUVSSnbLIy/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-pink-300 hover:border-pink-400 transition-colors">
-
                 <i data-lucide="instagram" class="w-5 h-5"></i>
-
             </a>
-
             <a href="mailto:comunidad@nuestrogrupo.org" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-pink-300 hover:border-pink-400 transition-colors">
-
                 <i data-lucide="mail" class="w-5 h-5"></i>
-
             </a>
-
         </div>
-
-
-
-      
-
-        </p>
-
     </footer>
 
-
-
     <script>
-
         document.addEventListener('DOMContentLoaded', () => {
-
             lucide.createIcons();
-
             initSunsetCanvas();
-
             initVhsTimestamp();
-
+            initTranslator();
         });
 
-
-
-        // VHS Live Timestamp Counter
-
-        function initVhsTimestamp() {
-
-            let seconds = 0;
-
-            const el = document.getElementById('vhs-timestamp');
-
-            setInterval(() => {
-
-                seconds++;
-
-                const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
-
-                const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
-
-                const secs = String(seconds % 60).padStart(2, '0');
-
-                el.textContent = `${hrs}:${mins}:${secs}`;
-
-            }, 1000);
-
-        }
-
-
-
-        // Pure Sunset Sky Canvas Render (No horizon, No city, No moon)
-
-        function initSunsetCanvas() {
-
-            const canvas = document.getElementById('sunset-canvas');
-
-            const ctx = canvas.getContext('2d');
-
-            let stars = [];
-
-            let clouds = [];
-
-
-
-            function resize() {
-
-                canvas.width = window.innerWidth;
-
-                canvas.height = window.innerHeight;
-
-                initStars();
-
-                initClouds();
-
-            }
-
-
-
-            // Generate realistic dispersed twinkling stars
-
-            function initStars() {
-
-                stars = [];
-
-                const numStars = Math.floor((canvas.width * canvas.height) / 3200);
-
-                for (let i = 0; i < numStars; i++) {
-
-                    stars.push({
-
-                        x: Math.random() * canvas.width,
-
-                        y: Math.random() * (canvas.height * 0.75),
-
-                        radius: Math.random() * 1.6 + 0.3,
-
-                        alpha: Math.random() * 0.8 + 0.2,
-
-                        speed: Math.random() * 0.02 + 0.005,
-
-                        phase: Math.random() * Math.PI * 2
-
-                    });
-
-                }
-
-            }
-
-
-
-            // Soft atmospheric twilight cloud layers
-
-            function initClouds() {
-
-                clouds = [];
-
-                for (let i = 0; i < 6; i++) {
-
-                    clouds.push({
-
-                        x: Math.random() * canvas.width,
-
-                        y: canvas.height * 0.35 + Math.random() * (canvas.height * 0.45),
-
-                        width: canvas.width * (0.4 + Math.random() * 0.5),
-
-                        height: 80 + Math.random() * 100,
-
-                        speed: 0.15 + Math.random() * 0.2,
-
-                        alpha: 0.15 + Math.random() * 0.15
-
-                    });
-
-                }
-
-            }
-
-
-
-            function animate() {
-
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-
-
-                // Pure Twilight Sunset Sky Gradient
-
-                const skyGrad = ctx.createLinearGradient(0, 0, 0, canvas.height);
-
-                skyGrad.addColorStop(0, '#0d041c');     // Deep Night Purple
-
-                skyGrad.addColorStop(0.32, '#230a3b');  // Violet Twilight
-
-                skyGrad.addColorStop(0.60, '#591653');  // Deep Magenta
-
-                skyGrad.addColorStop(0.82, '#b2396c');  // Vibrant Pink Sunset
-
-                skyGrad.addColorStop(1, '#e3687c');     // Warm Peach Sunset Glow
-
-                ctx.fillStyle = skyGrad;
-
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-
-
-                // Render Dispersed Realistic Stars
-
-                stars.forEach(s => {
-
-                    s.phase += s.speed;
-
-                    const tw = Math.sin(s.phase) * 0.35;
-
-                    const currentAlpha = Math.min(1, Math.max(0.1, s.alpha + tw));
-
-
-
-                    ctx.beginPath();
-
-                    ctx.arc(s.x, s.y, s.radius, 0, Math.PI * 2);
-
-                    ctx.fillStyle = `rgba(255, 235, 245, ${currentAlpha})`;
-
-                    ctx.shadowColor = 'rgba(255, 255, 255, 0.8)';
-
-                    ctx.shadowBlur = s.radius > 1.2 ? 6 : 2;
-
-                    ctx.fill();
-
-                    ctx.shadowBlur = 0;
-
-                });
-
-
-
-                // Render Drifting Twilight Cloud Layers
-
-                clouds.forEach(c => {
-
-                    c.x += c.speed;
-
-                    if (c.x - c.width > canvas.width) c.x = -c.width;
-
-
-
-                    const cloudGrad = ctx.createRadialGradient(
-
-                        c.x, c.y, 10,
-
-                        c.x, c.y, c.width / 2
-
-                    );
-
-                    cloudGrad.addColorStop(0, `rgba(180, 50, 110, ${c.alpha})`);
-
-                    cloudGrad.addColorStop(0.6, `rgba(80, 20, 70, ${c.alpha * 0.5})`);
-
-                    cloudGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-
-
-
-                    ctx.fillStyle = cloudGrad;
-
-                    ctx.beginPath();
-
-                    ctx.ellipse(c.x, c.y, c.width / 2, c.height / 2, 0, 0, Math.PI * 2);
-
-                    ctx.fill();
-
-                });
-
-
-
-                requestAnimationFrame(animate);
-
-            }
-
-
-
-            window.addEventListener('resize', resize);
-
-            resize();
-
-            animate();
-
-        }
-
-    </script>
-
-</body>
-
-</html>
+        // 20-Language Dynamic Translator Engine
+        const translations = {
+            es: {
+                inicio: "Inicio", sobre: "Sobre nosotros", reglas: "Reglas", unete: "Únete",
+                heroTitle: "Conecta.<br>Comparte.<br>",
+                heroSub: "Un lugar para jóvenes de 14 a 19 años que quieren conocer gente nueva, hacer amigos y crear recuerdos.",
+                ctaBtn: "QUIERO UNIRME", ctaSub: "Únete a nuestra comunidad",
+                secFindTitle: "¿Qué encontrarás aquí?", secFindDesc: "Diseñado especialmente para ofrecerte un espacio único de conexión genuina, entretenimiento sano y crecimiento mutuo.",
+                f1Title: "Nuevas amistades", f1Desc: "Conecta y entabla lazos profundos con personas increíbles que comparten tus mismos intereses y vibras.",
+                f2Title: "Conversaciones", f2Desc: "Comparte ideas, gustos musicales, anécdotas y charlas memorables en un ambiente dinámico y receptivo.",
+                f3Title: "Diversión", f3Desc: "Participa activamente en dinámicas interactivas, eventos especiales y juegos diseñados para pasar momentos inolvidables.",
+                f4Title: "Ambiente seguro", f4Desc: "Priorizamos el bienestar común con un riguroso cuidado comunitario y un respeto absoluto hacia todos los miembros.",
+                secRulesTag: "Código de Convivencia", secRulesTitle: "Nuestras reglas", secRulesDesc: "Los pilares fundamentales que garantizan una convivencia sana, armoniosa y segura para cada integrante de la comunidad.",
+                r1Title: "Respeto", r1Desc: "Trata a todos con respeto mutuo. No se toleran insultos, faltas de consideración ni discriminación de ningún tipo.",
+                r2Title: "No acoso", r2Desc: "Cero tolerancia al acoso, hostigamiento, burlas malintencionadas o amenazas dirigidas a otros miembros.",
+                r3Title: "Contenido apropiado", r3Desc: "Estrictamente prohibido compartir material explícito, sexual, violento o que atente contra la integridad visual y moral.",
+                r4Title: "Edad", r4Desc: "Comunidad dedicada exclusivamente para jóvenes en el rango de edad comprendido entre los 14 y 19 años.",
+                r5Title: "Incumplimiento", r5Desc: "Cualquier infracción o incumplimiento reiterado de las reglas conlleva la expulsión inmediata y definitiva del grupo.",
+                footerQuote: "✦ \"Sé tú, conecta, comparte y brilla.\" ♡"
+            },
+            en: {
+                inicio: "Home", sobre: "About us", reglas: "Rules", unete: "Join",
+                heroTitle: "Connect.<br>Share.<br>",
+                heroSub: "A place for teens aged 14 to 19 who want to meet new people, make friends, and create memories.",
+                ctaBtn: "I WANT TO JOIN", ctaSub: "Join our community",
+                secFindTitle: "What will you find here?", secFindDesc: "Specially designed to offer you a unique space for genuine connection, wholesome entertainment, and mutual growth.",
+                f1Title: "New Friendships", f1Desc: "Connect and build deep bonds with incredible people who share your interests and vibes.",
+                f2Title: "Conversations", f2Desc: "Share ideas, musical tastes, anecdotes, and memorable chats in a dynamic and welcoming environment.",
+                f3Title: "Fun", f3Desc: "Actively participate in interactive dynamics, special events, and games designed for unforgettable moments.",
+                f4Title: "Safe Environment", f4Desc: "We prioritize community well-being with rigorous care and absolute respect for all members.",
+                secRulesTag: "Code of Conduct", secRulesTitle: "Our Rules", secRulesDesc: "The fundamental pillars that guarantee a healthy, harmonious, and safe coexistence for every community member.",
+                r1Title: "Respect", r1Desc: "Treat everyone with mutual respect. Insults, lack of consideration, or discrimination of any kind are not tolerated.",
+                r2Title: "No Harassment", r2Desc: "Zero tolerance for harassment, bullying, malicious teasing, or threats directed at other members.",
+                r3Title: "Appropriate Content", r3Desc: "Strictly prohibited to share explicit, sexual, violent, or morally compromising material.",
+                r4Title: "Age", r4Desc: "Community dedicated exclusively to young people aged 14 to 19.",
+                r5Title: "Non-compliance", r5Desc: "Any infraction or repeated breach of the rules will result in immediate and permanent expulsion from the group.",
+                footerQuote: "✦ \"Be yourself, connect, share and shine.\" ♡"
+            },
+            pt: {
+                inicio: "Início", sobre: "Sobre nós", reglas: "Regras", unete: "Participe",
+                heroTitle: "Conecte.<br>Compartilhe.<br>",
+                heroSub: "Um lugar para jovens de 14 a 19 anos que querem conhecer gente nova, fazer amigos e criar memórias.",
+                ctaBtn: "QUERO PARTICIPAR", ctaSub: "Junte-se à nossa comunidade",
+                secFindTitle: "O que você encontrará aqui?", secFindDesc: "Projetado especialmente para oferecer um espaço único de conexão genuína, entretenimento saudável e crescimento mútuo.",
+                f1Title: "Novas Amizades", f1Desc: "Conecte-se e crie laços profundos com pessoas incríveis que compartilham seus interesses e vibrações.",
+                f2Title: "Conversas", f2Desc: "Compartilhe ideias, gostos musicais, anedotas e conversas memoráveis em um ambiente dinâmico e acolhedor.",
+                f3Title: "Diversão", f3Desc: "Participe ativamente de dinâmicas interativas, eventos especiais e jogos projetados para momentos inesquecíveis.",
+                f4Title: "Ambiente Seguro", f4Desc: "Priorizamos o bem-estar comum com cuidado rigoroso e respeito absoluto a todos os membros.",
+                secRulesTag: "Código de Conduta", secRulesTitle: "Nossas Regras", secRulesDesc: "Os pilares fundamentais que garantem uma convivência saudável, harmoniosa e segura para cada integrante.",
+                r1Title: "Respeito", r1Desc: "Trate todos com respeito mútuo. Insultos, falta de consideração ou discriminação não são tolerados.",
+                r2Title: "Sem Assédio", r2Desc: "Tolerância zero para assédio, bullying, provocações maliciosas ou ameaças dirigidas a outros membros.",
+                r3Title: "Conteúdo Apropriado", r3Desc: "Estritamente proibido compartilhar material explícito, sexual, violento ou que comprometa a moral.",
+                r4Title: "Idade", r4Desc: "Comunidade dedicada exclusivamente a jovens na faixa etária de 14 a 19 anos.",
+                r5Title: "Descumprimento", r5Desc: "Qualquer infração ou quebra repetida das regras resultará na expulsão imediata e definitiva do grupo.",
+                footerQuote: "✦ \"Seja você, conecte, compartilhe e brilhe.\" ♡"
+            },
+            fr: {
+                inicio: "Accueil", sobre: "À propos", reglas: "Règles", unete: "Rejoindre",
+                heroTitle: "Connecte.<br>Partage.<br>",
+                heroSub: "Un endroit pour les jeunes de 14 à 19 ans qui veulent faire de nouvelles rencontres et créer des souvenirs.",
+                ctaBtn: "JE VEUX REJOINDRE", ctaSub: "Rejoignez notre communauté",
+                secFindTitle: "Que trouverez-vous ici ?", secFindDesc: "Spécialement conçu pour offrir un espace unique de connexion authentique et de divertissement sain.",
+                f1Title: "Nouvelles amitiés", f1Desc: "Créez des liens profonds avec des personnes incroyables qui partagent vos centres d'intérêt.",
+                f2Title: "Conversations", f2Desc: "Partagez des idées, des goûts musicaux et des discussions mémorables dans un cadre dynamique.",
+                f3Title: "Divertissement", f3Desc: "Participez activement à des dynamiques interactives et des événements spéciaux inoubliables.",
+                f4Title: "Environnement sûr", f4Desc: "Nous privilégions le bien-être commun avec un respect absolu envers tous les membres.",
+                secRulesTag: "Code de conduite", secRulesTitle: "Nos Règles", secRulesDesc: "Les piliers fondamentaux garantissant une cohabitation saine et sécurisée pour chaque membre.",
+                r1Title: "Respect", r1Desc: "Traitez tout le monde avec respect. Aucun insulte ni discrimination n'est toléré.",
+                r2Title: "Pas de harcèlement", r2Desc: "Tolérance zéro pour le harcèlement, l'intimidation ou les menaces envers d'autres membres.",
+                r3Title: "Contenu approprié", r3Desc: "Il est strictement interdit de partager du contenu explicite, sexuel ou violent.",
+                r4Title: "Âge", r4Desc: "Communauté réservée exclusivement aux jeunes de 14 à 19 ans.",
+                r5Title: "Non-respect", r5Desc: "Toute infraction aux règles entraînera l'expulsion immédiate et définitive du groupe.",
+                footerQuote: "✦ \"Sois toi-même, connecte, partage et brille.\" ♡"
+            },
+            de: {
+                inicio: "Startseite", sobre: "Über uns", reglas: "Regeln", unete: "Beitreten",
+                heroTitle: "Verbinde.<br>Teile.<br>",
+                heroSub: "Ein Ort für Jugendliche von 14 bis 19 Jahren, die neue Leute kennenlernen und Erinnerungen schaffen möchten.",
+                ctaBtn: "ICH MÖCHTE BEITRETEN", ctaSub: "Werde Teil unserer Community",
+                secFindTitle: "Was wirst du hier finden?", secFindDesc: "Speziell entwickelt, um dir einen einzigartigen Raum für echte Verbindung und gesunde Unterhaltung zu bieten.",
+                f1Title: "Neue Freundschaften", f1Desc: "Knüpfe tiefe Bande mit unglaublichen Menschen, die deine Interessen und Vibes teilen.",
+                f2Title: "Gespräche", f2Desc: "Teile Ideen, Musikgeschmack und unvergessliche Chats in einer dynamischen Umgebung.",
+                f3Title: "Spaß", f3Desc: "Nimm aktiv an interaktiven Spielen und Events teil, die für unvergessliche Momente sorgen.",
+                f4Title: "Sichere Umgebung", f4Desc: "Wir priorisieren das Wohlbefinden aller Mitglieder durch strikte Sorgfalt und Respekt.",
+                secRulesTag: "Verhaltenskodex", secRulesTitle: "Unsere Regeln", secRulesDesc: "Die Grundpfeiler für ein gesundes, harmonisches und sicheres Miteinander.",
+                r1Title: "Respekt", r1Desc: "Behandle jeden mit Respekt. Beleidigungen oder Diskriminierung werden nicht toleriert.",
+                r2Title: "Kein Mobbing", r2Desc: "Null Toleranz für Belästigung, Mobbing oder Drohungen gegenüber anderen Mitgliedern.",
+                r3Title: "Angemessener Inhalt", r3Desc: "Strengstens verboten, explizite, sexuelle oder gewalttätige Inhalte zu teilen.",
+                r4Title: "Alter", r4Desc: "Community exklusiv für Jugendliche im Alter von 14 bis 19 Jahren.",
+                r5Title: "Regelverstoß", r5Desc: "Jeder Verstoß gegen die Regeln führt zum sofortigen und endgültigen Ausschluss.",
+                footerQuote: "✦ \"Sei du selbst, verbinde dich, teile und strahle.\" ♡"
+            },
+            it: {
+                inicio: "Home", sobre: "Chi siamo", reglas: "Regole", unete: "Unisciti",
+                heroTitle: "Connettiti.<br>Condividi.<br>",
+                heroSub: "Un luogo per giovani dai 14 ai 19 anni che vogliono conoscere nuove persone e creare ricordi.",
+                ctaBtn: "VOGLIO UNIRMI", ctaSub: "Unisciti alla nostra community",
+                secFindTitle: "Cosa troverai qui?", secFindDesc: "Progettato appositamente per offrirti uno spazio unico di connessione autentica e sano intrattenimento.",
+                f1Title: "Nuove amicizie", f1Desc: "Crea legami profondi con persone incredibili che condividono i tuoi stessi interessi.",
+                f2Title: "Conversazioni", f2Desc: "Condividi idee, gusti musicali e chat memorabili in un ambiente dinamico e accogliente.",
+                f3Title: "Divertimento", f3Desc: "Partecipa attivamente a dinamiche interattive ed eventi speciali indimenticabili.",
+                f4Title: "Ambiente sicuro", f4Desc: "Diamo priorità al benessere comune con rigoroso rispetto e cura per tutti i membri.",
+                secRulesTag: "Codice di condotta", secRulesTitle: "Le nostre regole", secRulesDesc: "I pilastri fondamentali che garantiscono una convivenza sana, armoniosa e sicura.",
+                r1Title: "Rispetto", r1Desc: "Tratta tutti con rispetto reciproco. Insulti e discriminazioni non sono tollerati.",
+                r2Title: "No molestie", r2Desc: "Tolleranza zero per molestie, bullismo o minacce dirette ad altri membri.",
+                r3Title: "Contenuto appropriato", r3Desc: "Severamente vietato condividere materiale esplicito, sessuale o violento.",
+                r4Title: "Età", r4Desc: "Community dedicata esclusivamente a giovani dai 14 ai 19 anni.",
+                r5Title: "Inadempienza", r5Desc: "Qualsiasi violazione o ripetuta infrazione comporterà l'espulsione immediata e definitiva.",
+                footerQuote: "✦ \"Sii te stesso, connettiti, condividi e brilla.\" ♡"
+            },
+            ja: {
+                inicio: "ホーム", sobre: "私たちについて", reglas: "ルール", unete: "参加する",
+                heroTitle: "つながる。<br>共有する。<br>",
+                heroSub: "14歳から19歳までの若い世代が新しい友達を作り、思い出を作るための場所。",
+                ctaBtn: "参加したい", ctaSub: "コミュニティに参加しよう",
+                secFindTitle: "ここで見つかるもの", secFindDesc: "真のつながりと健全なエンターテインメントを楽しむための特別な空間。",
+                f1Title: "新しい友達", f1Desc: "趣味や波長が合う素晴らしい仲間と深い絆を築こう。",
+                f2Title: "会話", f2Desc: "音楽の好みやアイデアをダイナミックな環境で語り合おう。",
+                f3Title: "楽しさ", f3Desc: "インタラクティブなイベントやゲームで忘れられない瞬間を。",
+                f4Title: "安全な環境", f4Desc: "すべてのメンバーへの徹底した配慮と尊重を最優先しています。",
+                secRulesTag: "行動規範", secRulesTitle: "私たちのルール", secRulesDesc: "健全で安全な共生を保証するための基本的な柱。",
+                r1Title: "尊重", r1Desc: "お互いを尊重し合いましょう。侮辱や差別は一切容認されません。",
+                r2Title: "嫌がらせの禁止", r2Desc: "いじめや嫌がらせ、脅迫行為はゼロトレランスです。",
+                r3Title: "適切なコンテンツ", r3Desc: "露骨な性的・暴力的なコンテンツの共有は固く禁じられています。",
+                r4Title: "年齢", r4Desc: "14歳から19歳までの若者限定のコミュニティです。",
+                r5Title: "規約違反", r5Desc: "ルールの違反や繰り返しの不履行は、グループからの即座の永久追放につながります。",
+                footerQuote: "✦ 「あなたらしく、つながり、分かち合い、輝こう。」 ♡"
+            },
+            ko: {
+                inicio: "홈", sobre: "소개", reglas: "규칙", unete: "가입하기",
+                heroTitle: "연결.<br>공유.<br>",
+                heroSub: "14세부터 19세까지의 청소년들이 새로운 친구를 사귀고 추억을 만드는 공간.",
+                ctaBtn: "참여하기", ctaSub: "커뮤니티에 가입하세요",
+                secFindTitle: "여기서 무엇을 찾을 수 있나요?", secFindDesc: "진정한 소통과 건전한 오락을 위한 특별한 공간을 제공합니다.",
+                f1Title: "새로운 우정", f1Desc: "취향과 코드가 맞는 멋진 사람들과 깊은 유대감을 형성하세요.",
+                f2Title: "대화", f2Desc: "음악 취향과 아이디어를 역동적인 환경에서 나누어 보세요.",
+                f3Title: "재미", f3Desc: "잊지 못할 순간을 위한 다양한 이벤트와 게임에 참여하세요.",
+                f4Title: "안전한 환경", f4Desc: "모든 멤버에 대한 철저한 관리와 절대적인 상호 존중을 우선시합니다.",
+                secRulesTag: "행동 강령", secRulesTitle: "우리의 규칙", secRulesDesc: "건강하고 조화로운 공존을 보장하기 위한 기본 원칙.",
+                r1Title: "존중", r1Desc: "모두를 상호 존중으로 대하세요. 모욕이나 차별은 용납되지 않습니다.",
+                r2Title: "괴롭힘 금지", r2Desc: "괴롭힘, 따돌림, 위협 행위에 대해 무관용 원칙을 적용합니다.",
+                r3Title: "적절한 콘텐츠", r3Desc: "선정적이거나 폭력적인 콘텐츠의 공유는 엄격히 금지됩니다.",
+                r4Title: "연령", r4Desc: "14세부터 19세까지의 청소년 전용 커뮤니티입니다.",
+                r5Title: "규칙 위반", r5Desc: "반복적인 규칙 위반 시 그룹에서 즉시 영구 추방됩니다.",
+                footerQuote: "✦ \"너답게, 연결하고, 공유하며 빛나라.\" ♡"
+            },
+            zh: {
+                inicio: "首页", sobre: "关于我们", reglas: "规则", unete: "加入",
+                heroTitle: "连接。<br>分享。<br>",
+                heroSub: "专为14至19岁青少年打造的交友与创造美好回忆的专属空间。",
+                ctaBtn: "我想加入", ctaSub: "加入我们的社区",
+                secFindTitle: "在这里你能找到什么？", secFindDesc: "专为您提供一个真实连接、健康娱乐与共同成长的独特空间。",
+                f1Title: "新友谊", f1Desc: "与志同道合、磁场相吸的优秀伙伴建立深厚的友谊纽带。",
+                f2Title: "精彩对话", f2Desc: "在一个充满活力与包容的环境中畅谈想法、音乐品味与难忘趣事。",
+                f3Title: "无限乐趣", f3Desc: "积极参与互动活动、特色派对与各类趣味游戏，共度美好时光。",
+                f4Title: "安全环境", f4Desc: "我们通过严格的社区管理与绝对的互相尊重，保障每位成员的切身利益。",
+                secRulesTag: "行为准则", secRulesTitle: "我们的规则", secRulesDesc: "确保每位成员都能在一个健康、和谐且
